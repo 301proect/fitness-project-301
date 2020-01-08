@@ -1,0 +1,19 @@
+{
+  "name": "fitness-project-301",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/301proect/fitness-project-301.git"
+  },
+  "author": "ashar & ayman & mohammad & abd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/301proect/fitness-project-301/issues"
+  },
+  "homepage": "https://github.com/301proect/fitness-project-301#readme"
+}
