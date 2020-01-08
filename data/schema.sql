@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS exercies;
+
+CREATE TABLE exercies(
+    id SERIAL PRIMARY KEY
+   
+);
