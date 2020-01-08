@@ -41,12 +41,6 @@ server.use((error,req,res)=>{
     res.status(500).send(error)
 })
 
-
-
-
-
-
-
 client.on('error', error =>{
     throw error;
 })
