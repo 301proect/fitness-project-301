@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/301proect/fitness-project-301/issues"
   },
-  "homepage": "https://github.com/301proect/fitness-project-301#readme"
+  "homepage": "https://github.com/301proect/fitness-project-301#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "pg": "^7.17.0",
+    "superagent": "^5.2.1"
+  }
 }
