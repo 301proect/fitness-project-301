@@ -30,6 +30,9 @@ server.listen(PORT,()=>{
 server.get('/',(req,res)=>{
     res.status(200).send('hi I am alive')
 })
+server.get('/test',(req,res)=>{
+    res.status(200).send('hi I am alive')
+})
 
 server.use('*',(req,res)=>{
     res.status(404).send('nothing there')
