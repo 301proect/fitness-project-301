@@ -23,9 +23,9 @@ server.set('view engine', 'ejs');
 server.use( express.static('/public'));
 
 
-server.listen(PORT,()=>{
-    console.log(`listening on PORT${PORT}`)
-})
+// server.listen(PORT,()=>{
+//     console.log(`listening on PORT${PORT}`)
+// })
 
 server.get('/',(req,res)=>{
     res.status(200).send('hi I am alive')
