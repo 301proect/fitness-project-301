@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>the excercise result </h1>
+    <% workout.forEach((val) => { %>
+
+        <div>
+            <ul>
+                <li> machine Name: <%= val.data.name %></li>
+                <li> Category: <%= val.data.category %> </li>
+                <img src="<%= val.data.image %>" alt="https://i.ibb.co/M8JP7hV/download.png" srcset="">
+            </ul>
+        </div>
+
+
+
+    <% }) %>
+    
+</body>
+</html>

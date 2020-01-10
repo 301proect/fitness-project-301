@@ -28,11 +28,6 @@ server.set('view engine', 'ejs');
 // to use public folder
 // server.use( express.static('/public'));
 
-
-// server.listen(PORT,()=>{
-//     console.log(`listening on PORT${PORT}`)
-// })
-
 server.get('/', (req, res) => {
     res.status(200).render('index')
 })
@@ -69,7 +64,7 @@ function getMeals(req, res) {
 
     request(options, function (error, response, body) {
         let data = JSON.parse(body);
-        console.log(data);
+        // console.log(data);
         res.render('pages/searches/show', { food: data })
         if (error) throw new Error(error);
 
@@ -78,6 +73,24 @@ function getMeals(req, res) {
 
 // second route to get exercise
 
+server.get('/newExc' , (req , res) => {
+    res.render('pages/fitness/new')
+})
+
+server.post('/getExr' , getExcercise ) ;
+
+function getExcercise(req , res ){
+    let type = req.body.muscle ;
+    const url = `https://wger.de/api/v2/exercise/search/?term=${type}`
+    console.log( 'helooooooo ',url);
+
+    return superagent.get(url) 
+        .then(data => {
+            let newData = JSON.parse(data.text)
+            console.log('data super' ,newData.suggestions)
+            res.render('pages/fitness/show' , {workout : newData.suggestions})
+        })
+}
 
 
 
