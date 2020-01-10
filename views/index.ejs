@@ -3,16 +3,44 @@
 
 <head>
 <link rel="stylesheet" href="../public/styles/style.css">
+<link rel="stylesheet" href="../public/styles/base.css">
+<link rel="stylesheet" href="../public/styles/layout.css">
+<link rel="stylesheet" href="../public/styles/modules.css">
 <head>
     <%- include('./partials/head') %>
 </head>
 </head>
 <body>
-    <button><a href="/searches/list">zxckm</a></button>
+    <!-- //////////////////////// from w3school //////////////////// -->
+  <!-- <div class="mobile-container">
+
+     Top Navigation Menu -->
+    <!-- <div class="topnav">
+      <div id="myLinks">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <script>
+    function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+} --> 
     <%- include('./partials/header') %>
     <main>
+        <div class="header-for-main">
+       <img src="public/image/fitness9.jpg" alt="">
+       <img src="public/image/fitness8.jpg" alt="">
+        </div>
         <section id="sec1" >
-            <img id="model" src="https://i.imgur.com/pV2VAoN.png" alt="">
             <h2>IF NOT NOW ... <br> THEN WHEN ??</h2>
             <section id="insidesec1">
                 <p>NOTHING TRULY GREAT <br> EVER COME <br> FROM A COMFORT ZONE</p>
@@ -21,8 +49,8 @@
         </section>
 
         <section id="sec2">
-            <img id="model2" src="https://i.ibb.co/fQ0FSh5/1368958-fitness-png-file-fitness-png-1100-934-preview.png"
-                alt="">
+            <!-- <img id="model2" src="https://i.ibb.co/fQ0FSh5/1368958-fitness-png-file-fitness-png-1100-934-preview.png"
+                alt=""> -->
             <section id="insidesec2">
                 <p id="p">DO you think you have the suitable body shape ? <br> What does the correct diet mean .?? </p>
                 <h2>NEVERMIND !!!</h2>
@@ -34,18 +62,58 @@
 
         <section id="sec3">
             <section id="insidesec3">
-                <img onclick="location.href='list.html';"
-                    src="https://i1.wp.com/laprensaaustin.com/wp-content/uploads/2019/07/dsds.png?ssl=1" alt="">
+                <!-- <img onclick="location.href='list.html';"
+                    src="https://i1.wp.com/laprensaaustin.com/wp-content/uploads/2019/07/dsds.png?ssl=1" alt=""> -->
                 <h6 id="sentence">Git Your Free Workout NOW</h6>
                 <p> You choose your own life <br> The fact that you entered our website <br> means you want a new life
                     and we <br> will give you a Healthy one . </p>
             </section>
 
         </section>
-        <h1>main page</h1>
-        <a href="/newMeal">the form page</a>
+        <!-- <a href="/newMeal">the form page</a> -->
     </main>
-    
+    <div class="pricing-section text-center">
+        <div class="container">
+          <div class="col-md-12 col-sm-12 nopadding">
+            <div class="pricing-intro">
+              <h1 class="wow fadeInUp" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;">Our Package</h1>
+              <p class="wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Those who think they have not time for bodily exercise will sooner or later have to find time for illness.
+                 </p>
+            </div>
+            <div class="column1">
+              <div class="table-left " data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="pricing-details">
+                  <span>FOOD</span>
+                  <ul class="columnList">
+                    <li>Food is an important part of a balanced diet</li>
+                    <li>Take care of your body ,It’s the only place you have to live</li>
+                    <li>have to fight a battle more than once to win it</li>
+                    <li>You can have your cake and lose weight, too!”</li>
+                  </ul>
+                  <button class="btn-action"><a href="/newMeal">Get start</a></button>
+                </div>
+              </div>
+            </div>
+            <div class="column2">
+              <div class="table-right" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                <div class="pricing-details">
+                  <span>EXERCISES</span>
+                  <ul class="columnList">
+                    <li>You have to want it, you have to plan for it</li>
+                    <li>You don’t get the ass you want by sitting on it</li>
+                    <li>You have to do the work yourself</li>
+                    <li>Think of your workouts as important meetings</li>
+                  </ul>
+                  <button class="btn-action"><a href="/newExercise">Get start</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section >
+ <img src="../public/image/fitness4.jpg" alt="">
+      </section>
     <footer>
         <%- include('./partials/footer') %>  
     </footer>

@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>result</title>
+        <link rel="stylesheet" href="../public/styles/style.css">
+    <link rel="stylesheet" href="../public/styles/base.css">
+    <link rel="stylesheet" href="../public/styles/layout.css">
+    <link rel="stylesheet" href="../public/styles/modules.css">
+    </head>
+    
 </head>
 <body>
-    <h1>result </h1>
     <!-- food.nutrients -->
-    <div>
-        <h2>You Will Achive This Amount by using our male
-            plan </h2>
-            <br>
-            <ul>
-                <li> Your Targeted Calories: <%= food.nutrients.calories %></li>
-                <li> Protein : <%=food.nutrients.protein %> </li>
-                <li> Fat: <%=food.nutrients.fat %></li>
-                <li> Carbs: <%=food.nutrients.carbohydrates %></li>
-            </ul>
-    </div>
+    <main>
+        <section class="foodResult">
+            <div class="food-Result-1">
+                <h2 class="food-result-h">You Will Achive This Amount by using our male
+                    plan </h2>
+                    <br>
+                    <ul class="food-result-list-client">
+                        <li> Your Targeted Calories: <%= food.nutrients.calories %></li>
+                        <li> Protein : <%=food.nutrients.protein %> </li>
+                        <li> Fat: <%=food.nutrients.fat %></li>
+                        <li> Carbs: <%=food.nutrients.carbohydrates %></li>
+                    </ul>
     
-    <section>
+                </div>
 
-        <% food.meals.forEach((val) => { %>
-
-            <div>
-                <ul>
-                    <li> Meal Name: <%= val.title %></li>
-                    <li> Ready in minutes: <%= val.readyInMinutes %> </li>
-                    <li> Serving: <%= val.servings %> </li>
-                    <img src="https://spoonacular.com/recipeImages/<%=val.imageUrls[0]%>" alt="<%= val.imageUrls[1] %>" srcset="">
-                </ul>
-            </div>
-
-
-
-        <% }) %>
-    </section>
+            </section>
+            <section class="results">
+        
+                <% food.meals.forEach((val) => { %>
+        
+                    <div  class="food-Section">
+                        <ul class="food-result-list">
+                            <li> Meal Name: <%= val.title %></li>
+                            <li> Ready in minutes: <%= val.readyInMinutes %> </li>
+                            <li> Serving: <%= val.servings %> </li>
+                            <img src="https://spoonacular.com/recipeImages/<%=val.imageUrls[0]%>" id="resultImage" alt="<%= val.imageUrls[1] %>" srcset="">
+                            <button type="submit" class="add-To-MyData">Add To My Data</button>
+                        </ul>
+                    </div>
+        
+        
+                <% }) %>
+            </section>
+        </section>
+            </main>
 
 
 </body>
