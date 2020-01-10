@@ -23,7 +23,8 @@
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "pg": "^7.17.0",
-    "superagent": "^5.2.1"
+    "superagent": "^5.2.1",
+    "unirest": "*"
   },
   "devDependencies": {}
 }
