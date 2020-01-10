@@ -7,6 +7,7 @@ const express = require('express');
 const superagent = require('superagent');
 // cross origin resourses sharing 
 const cors = require('cors');
+// const PORT = process.env.PORT || 3000 ;
 // to talk with the DB
 const pg = require('pg');
 const DATABASE_URL = process.env.DATABASE_URL;
@@ -20,12 +21,14 @@ var request = require("request");
 const PORT = process.env.PORT || 3000;
 
 // middleware 
+
 server.use(express.urlencoded({ extended: true }));
 
 server.set('view engine', 'ejs');
 
-// to use public folder
 server.use('/public', express.static('public'));
+
+// to use public folder
 
 
 
@@ -33,9 +36,10 @@ server.use('/public', express.static('public'));
 //     console.log(`listening on PORT${PORT}`)
 // })
 
+
 server.get('/', (req, res) => {
     res.status(200).render('index')
-})
+});
 
 server.get('/newMeal', (req, res) => {
     res.render('pages/searches/new')
