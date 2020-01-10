@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <% table.forEach( (val) => { %>
+            <div>
+                <li> calories: <%= val.cal%> </li>
+                <li> protien: <%= val.prot %> </li>
+                <li> fat: <%= val.fat %> </li>
+                <li> carbohydrate: <%= val.carb %> </li>
+
+                <% let jsonData = JSON.parse(val.meals) %>
+                <% jsonData.forEach( (meal) => { %>
+
+                    <li>Meal Name: <%= meal.title %> </li>
+                    <li>Ready in minutes: <%= meal.readyInMinutes %> </li>
+                    <li>Serving: <%= meal.servings %> </li>
+                    <img src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0]%>" >
+
+                <% }) %>
+
+                <li> machine name: <%= val.machine%> </li>
+                <li> catagory : <%= val.catagory %> </li>
+                <img src="<%= val.url %>">
+
+            </div>
+
+       <% }) %>
+
+    </div>
+    
+</body>
+</html>
