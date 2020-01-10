@@ -7,6 +7,7 @@ const express = require('express');
 const superagent = require('superagent');
 // cross origin resourses sharing 
 const cors = require('cors');
+const PORT = process.env.PORT || 3000 ;
 // to talk with the DB
 const pg = require('pg');
 const DATABASE_URL = process.env.DATABASE_URL;
@@ -15,12 +16,15 @@ const client = new pg.Client(DATABASE_URL)
 const server = express();
 server.use(cors());
 
-const PORT = process.env.PORT || 3000 ;
 server.use(express.urlencoded({ extended: true }));
 server.set('view engine', 'ejs');
 
-// to use public folder
 server.use('/public', express.static('public'));
+
+server.get( '/searches/list' , (req , res)=>{
+    res.status(200).send('asd,mhnhbgvfcdsderethyjuikkjmn')
+})
+// to use public folder
 
 
 // server.listen(PORT,()=>{
@@ -28,7 +32,7 @@ server.use('/public', express.static('public'));
 // })
 
 server.get('/',(req,res)=>{
-    res.status(200).send('hi I am alive')
+    res.render('index');
 })
 server.get('/test',(req,res)=>{
     res.status(200).send('hi I am alive')
