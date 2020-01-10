@@ -21,9 +21,6 @@ server.set('view engine', 'ejs');
 
 server.use('/public', express.static('public'));
 
-server.get( '/searches/list' , (req , res)=>{
-    res.status(200).send('asd,mhnhbgvfcdsderethyjuikkjmn')
-})
 // to use public folder
 
 
