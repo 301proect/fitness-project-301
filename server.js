@@ -22,11 +22,11 @@ const PORT = process.env.PORT || 3000;
 // middleware 
 server.use(express.urlencoded({ extended: true }));
 
-
 server.set('view engine', 'ejs');
 
 // to use public folder
-// server.use( express.static('/public'));
+server.use('/public', express.static('public'));
+
 
 
 // server.listen(PORT,()=>{
