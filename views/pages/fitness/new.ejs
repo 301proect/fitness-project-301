@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>exercise form</title>
+    <link rel="stylesheet" href="public/styles/form.css">
 </head>
 <body>
 
 
-    <h1> excercise page</h1>
+    <!-- <h2> excercise page</h2> -->
+    
+    <form action="/getExr" method="POST" class="exercise-form">
+        <h2 class="exercise-header"> get exercise depend on machine available in your gym </h2>
+        <h2 class="exercise-header"> Select one of Machine Please : </h2>
 
-    <form action="/getExr" method="POST">
-
-        <h1> get exercise depend on machine available in your gym </h1>
-
-        <br>
-
-        bench
-    <input type="radio" name="muscle" value="bench">
+        <fieldset>
+            <!-- <br> -->
+    <!-- Select one of Machine Please -->
     <br>
-    dumbbells
-    <input type="radio" name="muscle" value="dumbbell">
+    <input type="radio" name="muscle" class="radio-input" value="bench" required>
+    <label for="">bench</label>       
     <br>
-    smith machine
-    <input type="radio" name="muscle" value="smith">
+    <input type="radio" name="muscle"  class="radio-input" value="dumbbell" required>
+    <label for="">dumbbells</label>   
     <br>
-    barbell
-    <input type="radio" name="muscle" value="barbell">
+    <input type="radio" name="muscle"class="radio-input" value="smith" required>
+    <label for="">smith machine</label>    
     <br>
-    pull machines
-    <input type="radio" name="muscle" value="pull">
+    <input type="radio" name="muscle" class="radio-input" value="barbell" required>
+    <label for="">barbell</label>   
     <br>
-    <button type="submit" > Submit </button>
+    <input type="radio" name="muscle" class="radio-input" value="pull" required>
+    <label for="">pull machines</label>  
+    <br>
+    <button type="submit" class="exercise-button"> Submit </button>
+</fieldset>
     </form>
     
 

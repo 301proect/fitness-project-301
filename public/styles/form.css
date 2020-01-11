@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
+html{
+    background-color: rgba(0, 0, 0, 0.774);
+} 
 @media (max-width: 768px){
     main{
         display: grid;
@@ -31,7 +34,7 @@
     border: transparent;
     width: 80%;
 }
-.foodForm button , .calc-form button{
+.foodForm button , .calc-form button ,.exercise-button{
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
     background: rgb(197, 24, 24);
@@ -44,7 +47,7 @@
     margin-top: 18%;
     margin-left: 24%;
 }
-.foodForm button:hover , .calc-form button {
+.foodForm button:hover , .calc-form button:hover , .exercise-button:hover {
    transform: scale(1.06);
    transition: 860ms; 
 }
@@ -90,4 +93,28 @@ label{
     /* transition: 200ms; */
     margin-top: 20%;
     text-decoration: none;
+}
+ /* ========================= exercise form ============================================== */
+.exercise-form{
+    padding: 3%;
+    margin: 3%;
+    color: white;
+ /* text-align: center; */
+    background-color: #222225;
+    box-shadow: 0px 0px 80px 0px rgba(0,0,0,.1);
+    border: transparent;
+    width: 80%;
+    margin-left: 7%;
+}
+.radio-input{
+    border:rgb(197, 24, 24) solid ;
+    width: 35%;
+    padding: 1%;
+    margin: 0%;
+}
+.exercise-header{
+    text-align: center;
+}
+.exercise-button{
+    margin-top: 10%; 
 }

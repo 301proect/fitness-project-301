@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="public/styles/result.css">
 </head>
 
 <body>
-
-    <h1>the excercise result </h1>
+<main>
+    <!-- <h1>the excercise result </h1> -->
     <% workout.forEach((val) => { %>
 
     <div>
-        <form action="/addMachine" name="<%= val.data.id%>" method="POST">
+        <form action="/addMachine" name="<%= val.data.id%>" method="POST" class="machine-form-result">
             <ul>
                 <li> machine Name:</li>
                 <input type="text" name="machine" value="<%= val.data.name %>">
@@ -22,10 +23,10 @@
                 <li> Category:  </li>
                 <input type="text" name="catagory" value="<%= val.data.category %>">
                 <br>
-                <img src="<%= val.data.image ? val.data.image: 'https://i.ibb.co/M8JP7hV/download.png' %>" alt="<%= val.data.name %> image" >
-                <input type="text" name="url" value="<%= val.data.image %>" style="display: none;">
+                <img class="machine-pic" src="<%= val.data.image ? val.data.image: 'https://cdn.improb.com/wp-content/uploads/2019/12/Marcy-Combo-Smith-Strength-Home-Gym-Machine-5276.jpg' %>" width="60%"  height="60%" alt="<%= val.data.name %> image" >
+                <!-- <input type="text" name="url" value="<%= val.data.image %>"> -->
             </ul>
-            <button type="submit">ADD</button>
+            <button type="submit"  class="add-machine-button">Add to my Exercises</button>
         </form>
 
 
@@ -34,6 +35,7 @@
 
 
     <% }) %>
+</main>
 
 </body>
 
