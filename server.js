@@ -23,18 +23,58 @@ const PORT = process.env.PORT || 3000;
 // middleware 
 
 server.use(express.urlencoded({ extended: true }));
-
 server.set('view engine', 'ejs');
 
+// profile page 
+server.get('/profile' , (req , res ) => {
+    let sql = 'SELECT * FROM food,machine ;' ;
+    return client.query(sql)
+        .then((data) => {
+            console.log(data.rows);
+            res.render('pages/profile/mystatus' , {table : data.rows});
+        })
+}) 
 server.use('/public', express.static('public'));
 
 // to use public folder
 
 
 
-// server.listen(PORT,()=>{
-//     console.log(`listening on PORT${PORT}`)
-// })
+
+
+// add machine info to database
+server.post('/addMachine' , addToDataBase) ;
+function addToDataBase(req , res){
+    // console.log(req.body)
+    let {machine , catagory , url } = req.body ;
+    let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
+    let values = [machine , catagory , url] ;
+    return client.query(SQL , values)
+        .then(() => {
+            res.send('welldone !!')
+
+        }) 
+}
+
+
+// add the food to database
+server.post('/status' , toDatabase) ;
+
+function toDatabase( req , res ){
+    // console.log(req.body)
+    let { cal , prot , fat ,carb, array } = req.body
+    let SQL = 'INSERT INTO food(cal , prot , fat ,carb , meals) VALUES ($1 , $2 , $3 ,$4 , $5);' ;
+    let values = [cal , prot , fat , carb, array ];
+
+    return client.query(SQL , values)
+        .then(() => {
+            res.render('pages/thanks/added')
+        })
+}
+
+
+
+// server.use( express.static('/public'));
 
 
 server.get('/', (req, res) => {
@@ -73,15 +113,33 @@ function getMeals(req, res) {
 
     request(options, function (error, response, body) {
         let data = JSON.parse(body);
-        console.log(data);
+        // console.log(data);
         res.render('pages/searches/show', { food: data })
         if (error) throw new Error(error);
 
     });
 }
 
-// second route to get exercise
+// second route to get machines
 
+server.get('/newExc' , (req , res) => {
+    res.render('pages/fitness/new')
+})
+
+server.post('/getExr' , getExcercise ) ;
+
+function getExcercise(req , res ){
+    let type = req.body.muscle ;
+    const url = `https://wger.de/api/v2/exercise/search/?term=${type}`
+    // console.log( 'helooooooo ',url);
+
+    return superagent.get(url) 
+        .then(data => {
+            let newData = JSON.parse(data.text)
+            // console.log('data super' ,newData.suggestions)
+            res.render('pages/fitness/show' , {workout : newData.suggestions})
+        })
+}
 
 
 

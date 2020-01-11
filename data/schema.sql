@@ -1,20 +1,20 @@
-DROP TABLE IF EXISTS exercises;
+DROP TABLE IF EXISTS food;
 
-CREATE TABLE exercies(
+CREATE TABLE food(
     id SERIAL PRIMARY KEY ,
-    clientName VARCHAR(255),
-    width VARCHAR(255),
-    hight VARCHAR(255) ,
-    exercise VARCHAR(255)
-   
+    cal VARCHAR (255),
+    prot VARCHAR (255),
+    fat VARCHAR (255) ,
+    carb VARCHAR (255),
+    meals text
 );
 
-DROP TABLE IF EXISTS foodPrograms ;
+DROP TABLE IF EXISTS machine;
 
-CREATE TABLE foodPrograms (
-id SERIAL PRIMARY KEY ,
-clientName VARCHAR(255),
-    width VARCHAR(255),
-    hight VARCHAR(255) ,
-    foodProgram VARCHAR(255)
+CREATE TABLE machine(
+    id SERIAL PRIMARY KEY ,
+    machine VARCHAR (255),
+    catagory VARCHAR (255),
+    url VARCHAR (255)
 );
+

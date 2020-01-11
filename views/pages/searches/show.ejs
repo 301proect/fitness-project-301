@@ -1,55 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>result</title>
         <link rel="stylesheet" href="../public/styles/style.css">
-    <link rel="stylesheet" href="../public/styles/base.css">
-    <link rel="stylesheet" href="../public/styles/layout.css">
-    <link rel="stylesheet" href="../public/styles/modules.css">
-    <link rel="stylesheet" href="public/styles/result.css">
+        <link rel="stylesheet" href="../public/styles/base.css">
+        <link rel="stylesheet" href="../public/styles/layout.css">
+        <link rel="stylesheet" href="../public/styles/modules.css">
+        <link rel="stylesheet" href="public/styles/result.css">
     </head>
-    
+
 </head>
+
 <body>
     <!-- food.nutrients -->
+
     <main>
         <section class="results">
-        <section class="foodResult">
-            <div class="food-Result-1">
-                <h2 class="food-result-h">You Will Achive This Amount by using our male
-                    plan </h2>
+            <section class="foodResult">
+                <div class="food-Result-1">
+                    <h2 class="food-result-h">You Will Achive This Amount by using our male
+                        plan </h2>
                     <br>
-                    <ul class="food-result-list-client">
-                        <li> Your Targeted Calories: <%= food.nutrients.calories %></li>
-                        <li> Protein : <%=food.nutrients.protein %> </li>
-                        <li> Fat: <%=food.nutrients.fat %></li>
-                        <li> Carbs: <%=food.nutrients.carbohydrates %></li>
-                    </ul>
-                    
+                    <form action="/status" method="POST">
+
+                        <ul class="food-result-list-client">
+                            <li> Your Targeted Calories: </li>
+                            <input type="text" value=" <%= food.nutrients.calories %>" name="cal">
+                            <br>
+                            <li> Protein: </li>
+                            <input type="text" value="<%=food.nutrients.protein %>" name="prot">
+                            <br>
+                            <li> Fat:</li>
+                            <input type="text" name="fat" value="<%=food.nutrients.fat %>">
+                            <br>
+                            <li> Carbs: </li>
+                            <input type="text" name="carb" value="<%=food.nutrients.carbohydrates %>">
+                            <br>
+                            <!-- secret data ha ha ha -->
+                            <input type="text" name="array" value="<%= JSON.stringify(food.meals) %>"
+                                style="display: none;">
+                        </ul>
+                        <button type="submit" class="add-To-MyData">Add To My Profile</button>
+                    </form>
+
                 </div>
-                <button type="submit" class="add-To-MyData">Add To My Data</button>
 
             </section>
-        
-                <% food.meals.forEach((val) => { %>
-        
-                    <div  class="food-Section">
-                        <ul class="food-result-list">
-                            <li> Meal Name: <%= val.title %></li>
-                            <li> Ready in minutes: <%= val.readyInMinutes %> </li>
-                            <li> Serving: <%= val.servings %> </li>
-                            <img src="https://spoonacular.com/recipeImages/<%=val.imageUrls[0]%>" id="resultImage" alt="<%= val.imageUrls[1] %>" srcset="">
-                        </ul>
-                    </div>
-        
-        
-                <% }) %>
-            </section>
+
+            <% food.meals.forEach((val) => { %>
+
+            <div class="food-Section">
+                <ul class="food-result-list">
+                    <li> Meal Name: <%= val.title %></li>
+                    <li> Ready in minutes: <%= val.readyInMinutes %> </li>
+                    <li> Serving: <%= val.servings %> </li>
+                    <img src="https://spoonacular.com/recipeImages/<%=val.imageUrls[0]%>" id="resultImage"
+                        alt="<%= val.imageUrls[1] %>" srcset="">
+                </ul>
+            </div>
+
+
+            <% }) %>
         </section>
-            </main>
+        </section>
+    </main>
+    <!-- <section class="results">
+    <section class="foodResult">  
+<div class="food-Result-1">
+        
+    </div> -->
+    <!-- </section>
+        <% food.meals.forEach((val) => { %>
+
+        <div>
+            <ul>
+                <li> Meal Name: <%= val.title %></li>
+                <li> Ready in minutes: <%= val.readyInMinutes %> </li>
+                <li> Serving: <%= val.servings %> </li>
+                <img src="https://spoonacular.com/recipeImages/<%=val.imageUrls[0]%>" alt="<%= val.imageUrls[1] %>">
+            </ul>
+        </div>
+
+        <% }) %>
+    </section>
+</section> -->
 </body>
+
 </html>

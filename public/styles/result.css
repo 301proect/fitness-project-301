@@ -1,4 +1,5 @@
 /* =========================== result section ============================= */
+@import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
 .food-Result-1{
     text-align: center;
     line-height: 2pc;
@@ -21,7 +22,7 @@
      border:rgb(197, 24, 24) solid ;
      margin: 3% 3% 3% 10%;
  }
- .food-Section:hover{
+ .food-Section:hover , .food-Result-1:hover{
      transform: scale(1.01);
      transition: 860ms; 
  }
@@ -35,16 +36,29 @@
      background: rgb(197, 24, 24);
      border-color: rgb(197, 24, 24);
      border-radius: 30px;
-     font-size: 19px;
-     width: 40%;
+     font-size: 80%;
+     width: 50%;
      padding: 15px 42px;
      transition: 200ms;
-     margin-left: 31%;
+     margin-left: 13%;
      margin-top: 1pc;
+     margin-bottom: 3%;
  }
  .food-result-list{
      font-family: 'Roboto', sans-serif;
      list-style-type: none;
      text-align: center;
      line-height: 40px;
+ }
+ input{
+     font-size: 80%;
+    border:rgb(197, 24, 24) solid ;
+    width: 40%;
+    padding: 1%;
+    margin: 1%;
+    font-family: 'Roboto', sans-serif;
+ }
+ .food-result-h{
+     font-size: 95%;
+     font-family: 'Roboto', sans-serif;
  }
