@@ -4,37 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My Profile </title>
+    <link rel="stylesheet" href="public/styles/myProfile.css">
 </head>
 <body>
-    <div>
+    <button class="button-click" id="my-food">My Diet Food </button>
+    <button class="button-click" id="my-exercise">My Exercises</button>
+
+    <div class="my-profile">
 
         <% table.forEach( (val) => { %>
-            <div>
+            <div class="My-choise">
+                <section class="results">
+                        <div class="food-Result-1">
+                <ul class="food-result-list-client">
                 <li> calories: <%= val.cal%> </li>
                 <li> protien: <%= val.prot %> </li>
                 <li> fat: <%= val.fat %> </li>
                 <li> carbohydrate: <%= val.carb %> </li>
-
+</u>
+</div>
+<section class="my-choises">
                 <% let jsonData = JSON.parse(val.meals) %>
+        <section class="all-food-section">
                 <% jsonData.forEach( (meal) => { %>
-
+  <div class="food-Section">
+                <ul class="food-result-list">
                     <li>Meal Name: <%= meal.title %> </li>
                     <li>Ready in minutes: <%= meal.readyInMinutes %> </li>
                     <li>Serving: <%= meal.servings %> </li>
-                    <img src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0]%>" >
-
-                <% }) %>
-
+                    <img  id="resultImage"src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0]%>" >
+                </ul>
+            </div>
+            <% }) %>
+            <button class="update-button">update</button>
+            <button class="delete-button">Delete</button>
+            </section>
+</section>
+</section>
+<div class="exercise-Section">
                 <li> machine name: <%= val.machine%> </li>
                 <li> catagory : <%= val.catagory %> </li>
-                <img src="<%= val.url %>">
-
+                <img id="resultImage" src="<%= val.url %>">
+                <button class="update-button">update</button>
+                <button class="delete-button">Delete</button>
             </div>
-
-       <% }) %>
-
-    </div>
-    
+        </div>
+                <% }) %>
+    </section>
+  </div> 
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script> 
+  <script src="public/js/app.js"></script>
 </body>
 </html>
