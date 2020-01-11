@@ -1,0 +1,50 @@
+/* =========================== result section ============================= */
+.food-Result-1{
+    text-align: center;
+    line-height: 2pc;
+ }
+ .food-result-list-client{
+     list-style-type: none;
+     font-size: 20px;
+ }
+ .results{
+     display: grid;
+     grid-template-columns: auto ;
+  grid-template-rows: auto auto auto auto;
+ }
+ .food-Section ,.food-Result-1{
+     color: white;
+     font-family: 'Roboto', sans-serif; 
+     font-size: 20px;
+     width: 75%;
+     background-color: #222225;
+     border:rgb(197, 24, 24) solid ;
+     margin: 3% 3% 3% 10%;
+ }
+ .food-Section:hover{
+     transform: scale(1.01);
+     transition: 860ms; 
+ }
+ #resultImage{
+     width: 60%;
+     height: 60%;
+ }
+ .add-To-MyData{
+     font-family: 'Roboto', sans-serif;
+     color: #FFFFFF;
+     background: rgb(197, 24, 24);
+     border-color: rgb(197, 24, 24);
+     border-radius: 30px;
+     font-size: 19px;
+     width: 40%;
+     padding: 15px 42px;
+     transition: 200ms;
+     margin-left: 31%;
+     margin-top: 1pc;
+ }
+ .food-result-list{
+     font-family: 'Roboto', sans-serif;
+     list-style-type: none;
+     text-align: center;
+     line-height: 40px;
+ }

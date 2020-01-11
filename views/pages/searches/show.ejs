@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="../public/styles/base.css">
     <link rel="stylesheet" href="../public/styles/layout.css">
     <link rel="stylesheet" href="../public/styles/modules.css">
+    <link rel="stylesheet" href="public/styles/result.css">
     </head>
     
 </head>
 <body>
     <!-- food.nutrients -->
     <main>
+        <section class="results">
         <section class="foodResult">
             <div class="food-Result-1">
                 <h2 class="food-result-h">You Will Achive This Amount by using our male
@@ -27,11 +29,11 @@
                         <li> Fat: <%=food.nutrients.fat %></li>
                         <li> Carbs: <%=food.nutrients.carbohydrates %></li>
                     </ul>
-    
+                    
                 </div>
+                <button type="submit" class="add-To-MyData">Add To My Data</button>
 
             </section>
-            <section class="results">
         
                 <% food.meals.forEach((val) => { %>
         
@@ -41,7 +43,6 @@
                             <li> Ready in minutes: <%= val.readyInMinutes %> </li>
                             <li> Serving: <%= val.servings %> </li>
                             <img src="https://spoonacular.com/recipeImages/<%=val.imageUrls[0]%>" id="resultImage" alt="<%= val.imageUrls[1] %>" srcset="">
-                            <button type="submit" class="add-To-MyData">Add To My Data</button>
                         </ul>
                     </div>
         
@@ -50,7 +51,5 @@
             </section>
         </section>
             </main>
-
-
 </body>
 </html>
