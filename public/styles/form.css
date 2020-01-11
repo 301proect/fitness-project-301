@@ -6,6 +6,7 @@ html{
     main{
         display: grid;
         grid-template-columns: auto;
+        grid-template-rows: 50% 50%;
     }  
     .foodForm button , .calc-form button{
         font-size: 17px;
@@ -18,9 +19,14 @@ html{
  }
  .calc-form ,#results{
     grid-column: 1;
+    grid-row: 2;
 }
 .foodForm{
     grid-column: 2;
+}
+.pricing-intro{
+    grid-column: 1 /span 2;
+    grid-row: 1;
 }
  }
 
