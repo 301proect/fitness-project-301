@@ -426,6 +426,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 200ms;
 }
 .btn-action a {
+    color: white;
     text-decoration: none;
 }
 .btn-action:hover{
@@ -532,4 +533,39 @@ margin-left: 500px;
 footer{
     margin-top: 30pc;
 }
-/* Footer end *
+/* Footer end */
+.button {
+    background-color: rgb(197, 24, 24);
+    border: none;
+    color: #FFFFFF;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+  }
+  .button:before,
+  .button:after {
+    border: 0 solid transparent;
+    transition: all 0.25s;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+  }
+  .button:before {
+    border-top: 2px solid rgb(197, 24, 24);
+    left: 0px;
+    top: -5px;
+  }
+  .button:after {
+    border-bottom: 2px solid rgba(117, 115, 115, 0.404);
+    bottom: -5px;
+    right: 0px;
+  }
+  .button:hover {
+    background-color: rgb(197, 24, 24);
+  }
+  .button:hover:before,
+  .button:hover:after {
+    height: 100%;
+    width: 100%;
+  }  

@@ -26,6 +26,16 @@ html{
      list-style-type: none;
      font-size: 20px;
  }
+ @media (min-width: 768px){
+    .all-food-section{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .food-result-list{
+        width: 90%;
+        height: 36pc;
+    }
+ } 
  .results{
      /* background-color: rgb(197, 24, 24); */
      display: grid;
@@ -36,49 +46,63 @@ html{
      color: white;
      font-family: 'Roboto', sans-serif; 
      font-size: 20px;
-     width: 75%;
+     width: 90%;
      background-color: #222225;
-     border:rgb(197, 24, 24) solid ;
-     margin: 3% 3% 3% 10%;
+     box-shadow: 0 0px 8px #250404;
+     margin: 3% 3% 3% 7%;
      list-style-type: none;
- }
- .food-Section:hover , .food-Result-1:hover{
+    }
+    .food-Result-1{
+        width: 70%;
+        height: 30%;
+        padding: 3%;
+    }
+    .food-result-list-client{
+        width: 70%;
+        height: 30%;
+        padding: 3%; 
+    }
+    .food-Section:hover , .food-Result-1:hover{
      transform: scale(1.01);
      transition: 860ms; 
  }
  #resultImage , .machine-pic{
-     width: 80%;
-     height: 80%;
-     /* margin: 3%; */
+     width: 85%;
+     height: auto;
+     margin: 10%;
+     background-color: white;
+     margin-right: 8%;
+     margin-top: 8%;
  }
- .add-To-MyData ,.add-machine-button {
-     font-family: 'Roboto', sans-serif;
-     color: #FFFFFF;
-     background: rgb(197, 24, 24);
-     border-color: rgb(197, 24, 24);
-     border-radius: 30px;
-     font-size: 80%;
-     width: 50%;
-     padding: 15px 42px;
-     transition: 200ms;
-     margin-left: 13%;
-     margin-top: 1pc;
-     margin-bottom: 3%;
- }
+ #resultImage {
+    width: 85%;
+    height: 50vh;
+    /* margin: 3%; */
+    background-color: white;
+    margin: 26px auto;
+}
+
  .food-result-list{
      font-family: 'Roboto', sans-serif;
      list-style-type: none;
      text-align: center;
-     line-height: 40px;
+     line-height: 30px;
+     padding: 0;
+     font-size: 18px;
  }
- input{
-     font-size: 80%;
-    border:rgb(197, 24, 24) solid ;
-    width: 40%;
-    padding: 1%;
-    margin: 1%;
-    font-family: 'Roboto', sans-serif;
- }
+ input , select{
+    border: 0;
+    border-bottom: 1px solid #313131;
+    width: 88%;
+    padding: 2%;
+    background: #222225;
+    margin: 1% 0 5% 0;
+    color: #fff;
+}
+input:hover , select:hover , input:focus , select:focus , input:checked , select:checked{
+    box-shadow: 0 0px 8px #250404;
+    /* margin: 3% 3% 3% 10%; */
+}
  .food-result-h{
      font-size: 95%;
      font-family: 'Roboto', sans-serif;
@@ -90,16 +114,64 @@ html{
     background-color: #222225;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    line-height: 40px;
+    line-height: 30px;
     color: white;
     font-family: 'Roboto', sans-serif; 
     font-size: 20px;
     width: 75%;
     background-color: #222225;
-    border:rgb(197, 24, 24) solid ;
+    box-shadow: 0 0px 8px #250404;
     margin: 3% 3% 3% 10%;
 }
 .machine-form-result ul{
     list-style-type: none;
 
  }
+ .button {
+    background-color: rgb(197, 24, 24);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    background: rgb(197, 24, 24);
+    /* border-color: rgb(197, 24, 24); */
+    border-radius: 30px;
+    font-size: 80%;
+    width: 50%;
+    padding: 15px 42px;
+    transition: 200ms;
+    margin-left: 6%;
+    margin-top: 1pc;
+    margin-bottom: 5%;
+    color: #FFFFFF;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  .button:before,
+  .button:after {
+    border: 0 solid transparent;
+    transition: all 0.25s;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+  }
+  .button:before {
+    border-top: 2px solid rgb(197, 24, 24);
+    left: 0px;
+    top: -5px;
+  }
+  .button:after {
+    border-bottom: 2px solid rgb(197, 24, 24);
+    bottom: -5px;
+    right: 0px;
+  }
+  .button:hover {
+    background-color: rgb(197, 24, 24);
+  }
+  .button:hover:before,
+  .button:hover:after {
+    height: 100%;
+    width: 100%;
+  }  

@@ -32,41 +32,42 @@
                         <ul class="food-result-list-client">
                             <li> Your Targeted Calories: </li>
                             <input type="text" value=" <%= food.nutrients.calories %>" name="cal">
-                            <br>
+                        
                             <li> Protein: </li>
                             <input type="text" value="<%=food.nutrients.protein %>" name="prot">
-                            <br>
+                        
                             <li> Fat:</li>
                             <input type="text" name="fat" value="<%=food.nutrients.fat %>">
-                            <br>
+                      
                             <li> Carbs: </li>
                             <input type="text" name="carb" value="<%=food.nutrients.carbohydrates %>">
-                            <br>
+
                             <!-- secret data ha ha ha -->
                             <input type="text" name="array" value="<%= JSON.stringify(food.meals) %>"
                                 style="display: none;">
                         </ul>
-                        <button type="submit" class="add-To-MyData">Add To My Profile</button>
+                        <button class="button" type="submit" >Add To My Profile</button>
                     </form>
 
                 </div>
 
             </section>
-
+            <section class="all-food-section">
             <% food.meals.forEach((val) => { %>
 
             <div class="food-Section">
                 <ul class="food-result-list">
+                    <img src="https://spoonacular.com/recipeImages/<%=val.imageUrls[0]%>" id="resultImage"
+                        alt="<%= val.imageUrls[1] %>" srcset="">
                     <li> Meal Name: <%= val.title %></li>
                     <li> Ready in minutes: <%= val.readyInMinutes %> </li>
                     <li> Serving: <%= val.servings %> </li>
-                    <img src="https://spoonacular.com/recipeImages/<%=val.imageUrls[0]%>" id="resultImage"
-                        alt="<%= val.imageUrls[1] %>" srcset="">
                 </ul>
             </div>
 
 
             <% }) %>
+        </section>    
         </section>
         </section>
     </main>

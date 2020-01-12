@@ -1,5 +1,21 @@
 /* =========================== result section ============================= */
 @import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
+@media (max-width: 768px){
+    .all-food-section{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+ @media (min-width: 768px){
+    .all-food-section{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .food-result-list{
+        width: 100%;
+        height: 30pc;
+    }
+ } 
 html{
     background-color: rgba(0, 0, 0, 0.774);
 } 
@@ -18,12 +34,19 @@ html{
     list-style-type: none;
     font-size: 20px;
 }
-/* .My-choise{
+.My-choise{
+    /* display: grid;
+    grid-template-columns: 50% 50%; */
+    /* grid-template-rows: 5fr; */
     width: 90%;
     margin: 3%;
-    background-color: rgb(80, 74, 74);
+    /* background-color: rgb(80, 74, 74); */
     padding: 2%;
-} */
+}
+.exercise-Section{
+    float: left;
+    /* grid-column: 1; */
+}
 .food-result-list{
     /* grid-column: 1; */
     font-family: 'Roboto', sans-serif;
@@ -40,11 +63,17 @@ html{
 }
 #resultImage{
     width: 60%;
-    height: 60%;
+    height: 50%;
+    margin: 1%;
+    background-color: white;
+}
+.machine-pic{
+    background-color: white;
 }
 .results{
     border: rgb(197, 24, 24) solid;
     padding: 3%;
+    margin: 2%;
 }
 .exercise-Section{
     width: 50%;
@@ -58,8 +87,6 @@ html{
     color: white;
     font-family: 'Roboto', sans-serif; 
     font-size: 20px;
-    width: 75%;
-    background-color: #222225;
     border:rgb(197, 24, 24) solid ;
     margin: 3% 3% 3% 10%;
 }
@@ -79,7 +106,7 @@ html{
     width: 50%;
     padding: 15px 42px;
     transition: 200ms;
-    margin-left: 17%;
+    margin-left: 25%;
     margin-top: 1pc;
     margin-bottom: 3%;
 }
@@ -87,4 +114,51 @@ html{
     font-size: 95%;
     font-family: 'Roboto', sans-serif;
 } 
- 
+
+.button {
+    background-color: rgb(197, 24, 24);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    background: rgb(197, 24, 24);
+    /* border-color: rgb(197, 24, 24); */
+    border-radius: 30px;
+    font-size: 80%;
+    width: 50%;
+    padding: 15px 42px;
+    transition: 200ms;
+    margin-left: 25%;
+    margin-top: 1pc;
+    margin-bottom: 3%;
+    color: #FFFFFF;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+  }
+  .button:before,
+  .button:after {
+    border: 0 solid transparent;
+    transition: all 0.25s;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+  }
+  .button:before {
+    border-top: 2px solid rgb(197, 24, 24);
+    left: 0px;
+    top: -5px;
+  }
+  .button:after {
+    border-bottom: 2px solid rgb(197, 24, 24);
+    bottom: -5px;
+    right: 0px;
+  }
+  .button:hover {
+    background-color: rgb(197, 24, 24);
+  }
+  .button:hover:before,
+  .button:hover:after {
+    height: 100%;
+    width: 100%;
+  }  

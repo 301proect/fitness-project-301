@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="public/styles/myProfile.css">
 </head>
 <body>
-    <button class="button-click" id="my-food">My Diet Food </button>
-    <button class="button-click" id="my-exercise">My Exercises</button>
+    <button  class="button"id="my-food">My Diet Food </button>
+    <button  class="button" id="my-exercise">My Exercises</button>
 
     <div class="my-profile">
 
@@ -25,6 +25,10 @@
 </u>
 </div>
 <section class="my-choises">
+    <!-- <button class="button" >update</button> -->
+    <form action="<%=`/delete/${val.id}?_method=DELETE`%>"method="POST">
+    <button class="button">Delete</button>
+    </form>
                 <% let jsonData = JSON.parse(val.meals) %>
         <section class="all-food-section">
                 <% jsonData.forEach( (meal) => { %>
@@ -37,8 +41,6 @@
                 </ul>
             </div>
             <% }) %>
-            <button class="update-button">update</button>
-            <button class="delete-button">Delete</button>
             </section>
 </section>
 </section>
@@ -46,8 +48,14 @@
                 <li> machine name: <%= val.machine%> </li>
                 <li> catagory : <%= val.catagory %> </li>
                 <img id="resultImage" src="<%= val.url %>">
-                <button class="update-button">update</button>
-                <button class="delete-button">Delete</button>
+                <form action="<%=`/delete/${val.id}?_method=DELETE`%>"method="POST">
+                <button  class="button">Delete</button>
+            </form>
+                <form action="<%=`/update/${val.id}_method=PUT`%>" method="POST" id="update-form">
+                    <button class="button" id="update">update</button> <br>
+                    <label for="">machine name</label>
+                    <input type="text" name="machine" value="<%=val.machine %>">
+                </form>
             </div>
         </div>
                 <% }) %>

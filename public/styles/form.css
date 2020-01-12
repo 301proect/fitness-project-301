@@ -9,7 +9,18 @@ html{
         grid-template-rows: 50% 50%;
     }  
     .foodForm button , .calc-form button{
-        font-size: 17px;
+        font-size: 30px;
+    }
+    .foodForm ,.calc-form{
+        padding: 3%;
+        margin: 5%;
+     color: white;
+        background-color: #222225;
+        box-shadow: 0px 0px 80px 0px rgba(0,0,0,.1);
+        border: transparent;
+        width: 400px;
+
+    
     }
 }
  @media (min-width: 768px){
@@ -17,7 +28,7 @@ html{
      display: grid;
      grid-template-columns: auto auto;
  }
- .calc-form ,#results{
+ .calc-form {
     grid-column: 1;
     grid-row: 2;
 }
@@ -28,19 +39,22 @@ html{
     grid-column: 1 /span 2;
     grid-row: 1;
 }
- }
-
- /* -----------------------  input form  --------------------------------------- */
- .foodForm ,.calc-form{
+.foodForm ,.calc-form{
     padding: 3%;
     margin: 2%;
  color: white;
     background-color: #222225;
     box-shadow: 0px 0px 80px 0px rgba(0,0,0,.1);
     border: transparent;
-    width: 80%;
+    width: 35pc;
+    display: grid;
+
 }
-.foodForm button , .calc-form button ,.exercise-button{
+ }
+
+ /* -----------------------  input form  --------------------------------------- */
+
+/* .foodForm button , .calc-form button ,.exercise-button{
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
     background: rgb(197, 24, 24);
@@ -50,34 +64,44 @@ html{
     width: 40%;
     padding: 15px 42px;
     transition: 200ms;
-    margin-top: 18%;
-    margin-left: 24%;
-}
-.foodForm button:hover , .calc-form button:hover , .exercise-button:hover {
+    margin-top: 10%;
+    margin-left: 28%;
+} */
+/* .foodForm button:hover , .calc-form button:hover , .exercise-button:hover {
    transform: scale(1.06);
    transition: 860ms; 
-}
-/* .foodForm:hover , .calc-form:hover{
-   transform: scale(1.01);
-   transition: 860ms;
 } */
 fieldset{
+/* display: grid;
+grid-template-columns: 50% 50%; */
    font-family: 'Gayathri', sans-serif;
    font-size: 17px;
     padding: 5%;
 }
 input , select{
-    border:rgb(197, 24, 24) solid ;
-    width: 40%;
+    border: 0;
+    border-bottom: 1px solid #313131;
+    width: 88%;
     padding: 2%;
-    margin: 3%;
+    background: #222225;
+    margin: 1% 0 5% 0;
+    color: #fff;
+}
+input:hover , select:hover , input:focus , select:focus , input:checked , select:checked{
+    outline: none;
+    box-shadow: 0 0px 8px #250404;
+
+    /* margin: 3% 3% 3% 10%; */
+}
+input#weight {
+    width: 67%;
 }
 label{
-    width: 70%;
-    font-size: 27px;
-    text-align: center;
-    padding: 2%;
+    width: 100%;
+    font-size: 18px;
+    padding: 4% 0 0% 0;
     margin-left: 2%;
+    display: block;
 }
 .weight_unit{
     width: 20%;
@@ -124,3 +148,54 @@ label{
 .exercise-button{
     margin-top: 10%; 
 }
+.button {
+    background-color: rgb(197, 24, 24);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    background: rgb(197, 24, 24);
+    /* border-color: rgb(197, 24, 24); */
+    border-radius: 30px;
+    font-size: 80%;
+    width: 50%;
+    padding: 15px 42px;
+    transition: 200ms;
+    margin-left: 25%;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    color: #FFFFFF;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  .button:before,
+  .button:after {
+    border: 0 solid transparent;
+    transition: all 0.25s;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+  }
+  .button:before {
+    border-top: 2px solid rgb(197, 24, 24);
+    left: 0px;
+    top: -5px;
+  }
+  .button:after {
+    border-bottom: 2px solid rgb(197, 24, 24);
+    bottom: -5px;
+    right: 0px;
+  }
+  .button:hover {
+    background-color: rgb(197, 24, 24);
+  }
+  .button:hover:before,
+  .button:hover:after {
+    height: 100%;
+    width: 100%;
+  }  
+  .herader-form{
+      text-align: center;
+  }

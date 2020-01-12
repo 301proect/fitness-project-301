@@ -25,13 +25,16 @@
     
         <div class="field-outer">
           <div class="field-items">
-              <label for=""> Calculate Your calories</label>
-            <div class="field field-large">         
-                Age:  <input type="text" name="age" id="age" inputmode="numeric" pattern="[0-9]*">
+              <h2  class="herader-form"> Calculate Your calories</h2>
+              <br/>
+            <div class="field field-large">  
+              <label for="">  Age:  </label>       
+              <input type="text" name="age" id="age" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your age please ">
             </div><!--  /.field-large -->
             
             <div class="field field-medium">
-              Gender:<select name="gender">
+              <label for="">Gender:</label>
+              <select name="gender">
                   <option value="defult">Select your gender</option>
                 <option value="Female">Female</option>
                 <option value="Male">Male</option>
@@ -45,7 +48,8 @@
         <div class="field-outer">
             <div class="field-items">
              <div class="field">
-                Height in CM:  <input type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*">
+               <label for="">Height in CM:</label>
+               <input type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your height">
               </div><!--  /.field -->        
             </div><!--  /.field-items -->
           </div><!--  /.field-outer -->
@@ -54,18 +58,18 @@
         <div class="field-outer">
           <div class="field-items">
             <div class="field field-large">
-                Your weight: <input type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*">
-            </div><!--  /.field-large -->
-            <div class="field field-small">
+              <label for="">Your weight: </label>
+              <input type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your Weight">
               <select name="weight_unit" class="weight_unit">
                 <option value="lb">lb</option>
                 <option value="kg">kg</option>
               </select>
-            </div><!--  /.field-small -->
+            </div><!--  /.field-large -->
+
           </div><!--  /.field-items -->
         </div><!--  /.field-outer -->
        <div class="btn-wrap field-outer">
-        <button class="form-submit">Calculate</button>
+        <button  class="button" id=".add-item">Calculate</button>
       </div>
       </div><!--  /.form fields -->
     
@@ -79,28 +83,25 @@
 <div id="results" style="display:none;"></div>
 <form action="/mealLest" method="POST" class="foodForm" >
     <fieldset>
-        <label for="form"> Please Select Your Information</label> <br>
+        <h2 class="herader-form"> Please Select Your Information</h2> <br>
         <!-- <input type="radio" name="time" value="day"> -->
         <!-- <input type="radio" name="time" value="week"> -->
-    Your Name :<input type="text" name="userName" id="user" placeholder="Enter your name please" required> <br>
-    <!-- Your Email: <input type="email" name="userEmail" placeholder="Enter your Email please"> <br> -->
-    <!-- Your Weight:<input type="namber" name="Weight" placeholder="Enter your Weight in Kg" required> <br> -->
-    <!-- Your height : <input type="namber" name="height" placeholder="Enter your height in Cm" required> <br> -->
-       Calories:<input type="number" name="calories"  placeholder="Write the calories Please "> <br>
-       Diet Type: <select name="dietType" id="dietType" required>Diet Type 
+        <label for="">Your Name :</label>
+    <input type="text" name="userName" id="user" placeholder="Enter your name please" required> <br>
+    <label for=""> Calories:</label>
+      <input type="number" name="calories"  placeholder="Write the calories Please ">
+      <label for="">Diet Type:</label>
+        <select name="dietType" id="dietType" required>Diet Type 
             <option value="defult"> Select Diet Type .. </option>
             <option value="vegetarian">vegetarian</option>
             <option value="Low-Carb Diets">Low-Carb Diets</option>
             <option value="The Paleo Diet">The Paleo Diet</option>
             <option value="The Vegan Diet">The Vegan Diet</option>
-        </select> <br>
-        Spicial Satuation<select name="spicial" id="spicial">
-            <option value="defult">Select If you have Spicial Satuation</option>
-            <option value="allergens">allergens</option>
-            <option value="ingredients">ingredients</option>
-        </select> <br>
-        <!-- <input type="text" name="spicial" placeholder="allergens or ingredients that must be excluded"> -->
-        <button type="submit"> Submit</button>
+        </select>
+        <label for=""> Spicial Satuation</label>
+        <input type="text" placeholder="Select If you have Spicial Satuation (allergic .. etc)">
+      </div><!--  /.field-outer -->
+        <button type="submit" class="button"> Submit</button>
    
     </fieldset>
    </form>

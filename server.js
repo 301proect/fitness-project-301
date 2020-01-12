@@ -25,6 +25,8 @@ const PORT = process.env.PORT || 3000;
 server.use(express.urlencoded({ extended: true }));
 server.set('view engine', 'ejs');
 
+const methodOverride = require('method-override');
+server.use(methodOverride('_method')) ;
 // profile page 
 server.get('/profile' , (req , res ) => {
     let sql = 'SELECT * FROM food,machine ;' ;
@@ -35,13 +37,6 @@ server.get('/profile' , (req , res ) => {
         })
 }) 
 server.use('/public', express.static('public'));
-
-// to use public folder
-
-
-
-
-
 // add machine info to database
 server.post('/addMachine' , addToDataBase) ;
 function addToDataBase(req , res){
@@ -141,7 +136,67 @@ function getExcercise(req , res ){
         })
 }
 
+// add machine info to database
+server.post('/addMachine' , addToDataBase) ;
+function addToDataBase(req , res){
+    // console.log(req.body)
+    let {machine , catagory , url } = req.body ;
+    let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
+    let values = [machine , catagory , url] ;
+    return client.query(SQL , values)
+        .then(() => {
+            res.send('welldone !!')
+        }) 
+}
 
+
+
+server.get('/addMachine:table_id' , getmachineById)
+
+// ///////////////////////////// 
+function getmachineById(req , res) {
+    let id = req.params.machine_id;
+    let SQL = `SELECT * FROM machine WHERE id=$1 ;`;
+    let values = [id];
+    return client.query(SQL , values)
+    .then((data)=>{
+      res.render('pages/profile/mystatus' , { machineChouse : data.rows[0]})
+    })
+}
+/////////// update the machine ////////
+server.put( '/update/:machine_id' , updateMachine);
+
+function updateMachine(req , res) {
+    let {machine} = req.body ;
+    console.log(machine)
+    let SQL = `UPDATE machine SET machine=$1 WHERE id=$2;`;
+    let values = [machine ,req.params.machine_id];
+    return client.query(SQL , values)
+  .then(()=>{
+     return res.redirect(`/mystatus/${req.params.machine_id}`);
+  })
+}
+
+// new route to delete data from database for food
+server.delete('/delete/:the_food' , deleteFood) ;
+function deleteFood(req , res){
+  let SQL = 'DELETE FROM food WHERE id=$1 ;' ;
+  let values = [req.params.the_food] ;
+  return client.query(SQL , values)
+    .then(() => {
+      return res.redirect('pages/profile/mystatus');
+    })
+}
+// new route to delete data from database for exercise
+server.delete('/delete/:the_machine' , deleteMachine) ;
+function deleteMachine(req , res){
+  let SQL = 'DELETE FROM machine WHERE id=$1 ;' ;
+  let values = [req.params.the_machine] ;
+  return client.query(SQL , values)
+    .then(() => {
+      return res.redirect('pages/profile/mystatus');
+    })
+}
 
 
 server.use('*', (req, res) => {
