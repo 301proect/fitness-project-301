@@ -15,6 +15,11 @@
         width: 100%;
         height: 30pc;
     }
+    .exercise-Section{
+        float: left;
+        /* grid-column: 1; */
+        height: 146vh;
+    }
  } 
 html{
     background-color: rgba(0, 0, 0, 0.774);
@@ -34,15 +39,7 @@ html{
     list-style-type: none;
     font-size: 20px;
 }
-.My-choise{
-    /* display: grid;
-    grid-template-columns: 50% 50%; */
-    /* grid-template-rows: 5fr; */
-    width: 90%;
-    margin: 3%;
-    /* background-color: rgb(80, 74, 74); */
-    padding: 2%;
-}
+
 .exercise-Section{
     float: left;
     /* grid-column: 1; */
@@ -71,12 +68,13 @@ html{
     background-color: white;
 }
 .results{
-    border: rgb(197, 24, 24) solid;
+    box-shadow: 0 0px 8px #250404;
     padding: 3%;
     margin: 2%;
 }
 .exercise-Section{
-    width: 50%;
+ float: left;
+    width: 40%;
     /* grid-column: 2;
     grid-row: 1; */
     background-color: #222225;
@@ -87,8 +85,8 @@ html{
     color: white;
     font-family: 'Roboto', sans-serif; 
     font-size: 20px;
-    border:rgb(197, 24, 24) solid ;
-    margin: 3% 3% 3% 10%;
+    box-shadow: 0 0px 8px #250404;
+    margin: 5%;
 }
 .results{
      grid-column: 1; 

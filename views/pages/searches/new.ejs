@@ -29,12 +29,12 @@
               <br/>
             <div class="field field-large">  
               <label for="">  Age:  </label>       
-              <input type="text" name="age" id="age" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your age please ">
+              <input  class="food-input"type="text" name="age" id="age" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your age please ">
             </div><!--  /.field-large -->
             
             <div class="field field-medium">
               <label for="">Gender:</label>
-              <select name="gender">
+              <select name="gender" class="food-input">
                   <option value="defult">Select your gender</option>
                 <option value="Female">Female</option>
                 <option value="Male">Male</option>
@@ -49,7 +49,7 @@
             <div class="field-items">
              <div class="field">
                <label for="">Height in CM:</label>
-               <input type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your height">
+               <input class="food-input" type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your height">
               </div><!--  /.field -->        
             </div><!--  /.field-items -->
           </div><!--  /.field-outer -->
@@ -59,7 +59,7 @@
           <div class="field-items">
             <div class="field field-large">
               <label for="">Your weight: </label>
-              <input type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your Weight">
+              <input class="food-input" type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your Weight">
               <select name="weight_unit" class="weight_unit">
                 <option value="lb">lb</option>
                 <option value="kg">kg</option>
@@ -69,7 +69,7 @@
           </div><!--  /.field-items -->
         </div><!--  /.field-outer -->
        <div class="btn-wrap field-outer">
-        <button  class="button" id=".add-item">Calculate</button>
+        <button  class="button" id=".add-item" value="cal-result">Calculate</button>
       </div>
       </div><!--  /.form fields -->
     
@@ -87,11 +87,11 @@
         <!-- <input type="radio" name="time" value="day"> -->
         <!-- <input type="radio" name="time" value="week"> -->
         <label for="">Your Name :</label>
-    <input type="text" name="userName" id="user" placeholder="Enter your name please" required> <br>
+    <input class="food-input" type="text" name="userName" id="user" placeholder="Enter your name please" required> <br>
     <label for=""> Calories:</label>
-      <input type="number" name="calories"  placeholder="Write the calories Please ">
+      <input  class="food-input" type="number" name="calories" value="cal-result" placeholder="Write the calories Please ">
       <label for="">Diet Type:</label>
-        <select name="dietType" id="dietType" required>Diet Type 
+        <select  class="food-input" name="dietType" id="dietType" required>Diet Type 
             <option value="defult"> Select Diet Type .. </option>
             <option value="vegetarian">vegetarian</option>
             <option value="Low-Carb Diets">Low-Carb Diets</option>
@@ -99,7 +99,7 @@
             <option value="The Vegan Diet">The Vegan Diet</option>
         </select>
         <label for=""> Spicial Satuation</label>
-        <input type="text" placeholder="Select If you have Spicial Satuation (allergic .. etc)">
+        <input class="food-input" type="text" placeholder="Select If you have Spicial Satuation (allergic .. etc)">
       </div><!--  /.field-outer -->
         <button type="submit" class="button"> Submit</button>
    

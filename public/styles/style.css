@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
 html{
     background-color: rgba(0, 0, 0, 0.774);
 } 
@@ -12,7 +12,7 @@ html{
     /* #tabs{
         margin-left: 700px;
     } */
-    .dropbtn {
+    /* .dropbtn {
         background-color: rgba(20,20,20, 0.5);
         color: #c7c405;
         padding: 16px;
@@ -29,305 +29,16 @@ html{
       }
       
       /* The container <div> - needed to position the dropdown content */
-      .dropdown {
+      /* .dropdown {
         position: relative;
         display: inline-block;
       }
     
       
       /* Dropdown Content (Hidden by Default) */
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #141414;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      /* Links inside the dropdown */
-      .dropdown-content a {
-        color: #e1de18;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-      
-      /* Change color of dropdown links on hover */
-      .dropdown-content a:hover {
-          background-color: rgba(126, 101, 19, 0.589);
-          transition: 900ms;
-    
-    }
-    
-      
-      /* Show the dropdown menu on hover */
-      .dropdown:hover .dropdown-content {
-          display: block;
-          transition: 900ms;
-         
-        }
-      
-      /* Change the background color of the dropdown button when the dropdown content is shown */
-      .dropdown:hover .dropbtn {
-          background-color: rgba(43, 35, 8, 0.2);
-          transition: 900ms;
-        
-        }  
-  }  
-  }
-  @media (min-width: 1280px) {
-header{
-    width: auto;
-    height: 4pc;
-    background-color: rgba(0, 0, 0, 0.877);
-}
-#tabs{
-    margin-left: 700px;
-}
-.dropbtn {
-    background-color: rgba(20,20,20, 0.5);
-    color: #c7c405;
-    padding: 16px;
-    font-size: 16px;
-    border-width: 0.1px;
-    border-top: 1px;
-    border-bottom: 1px;
-    border-color: rgba(221, 236, 9, 0.63);
-    margin-right: 60px;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-    cursor: pointer;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #141414;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: #e1de18;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-      background-color: rgba(126, 101, 19, 0.589);
-      transition: 900ms;
-
-}
-
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-      display: block;
-      transition: 900ms;
      
-    }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-      background-color: rgba(43, 35, 8, 0.2);
-      transition: 900ms;
-    
-    }
-  
-  }
-  #sec1{
-    margin-top: 100px;
-    text-align: center;        
-    margin-top: 150px;
-    background: url(https://picserio.com/data/out/378/fitness-wallpaper-hd_5842872.jpg);
-    background-size: cover;
-    animation: fadein 5s;
-
-}
-
-#sec1 h2{
-    font-size: 55px;
-    color: #c7c405;
-    animation: fadeinout 2s , glow 1s;
-    animation-iteration-count: infinite;
-
-}
-
-
-#insidesec1{
-    background-color: #222225;
-    box-shadow: 0px 0px 80px 0px rgba(0,0,0,.1);
-    height: 300px;
-
-}
-
-
-#insidesec1 p{
-    width: fit-content;
-    font-size: 50px;
-    padding-top: 70px;
-    padding-left: 300px;
-    color: white;
-    transition: transform 1s ease-out;
-
-}
-
-#insidesec1 p:hover{
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-
-}
-
-#insidesec1 img{
-    float: left;
-    width: 400px ;
-    height: 300px;  
-    border-radius: 70%; 
-}
-
-#model{
-    float: right;
-    height: 600px;
-    margin-top: -100px;
-    margin-right: 15%;
-    transition: transform 1s ease-out;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-
-}
-#model:hover{
-    transform: scale(1.2);
-    /* transition: 3s; */
-}
-
-
-/* section 2 */
-
-#sec2{
-    margin-top: 100px;
-    text-align: center;        
-    margin-top: 200px;
-    height: 410px;
-    animation: fadein 5s;
-
-}
-
-#sec2{
-    color: white;
-}
-
-#insidesec2{
-    background-color: #222225;
-     box-shadow: 0px 0px 80px 0px rgba(0,0,0,.1);
-    height: 300px;
-}
-
-#insidesec2 p{
-    font-size: 25px;
-    margin-right: 15%;
-    transition: transform 1s ease-out;
-}
-
-#insidesec2 p:hover{
-    transform: scale(1.1);
-
-}
-
-#insidesec2 h2{
-    font-size: 55px;
-    padding: 1% 0% 1% 0%;
-    margin-right: 15%;
-
-}
-
-#insidesec2 #p{
-    padding-top: 3%;
-}
-
-#model2{
-    float: left;
-    margin-top: -100px;
-    margin-left: 10%;
-    transition: transform 3s ease-out;
-    width: 500px;
-    height: 500px;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    transition: transform 1s ease-out;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-
-}
-
-#model2:hover{
-    transform: scale(1.1);
-}
-
-/* section 3 */
-
-#sec3{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    background: url(https://lemanpublicrelations.com/wp-content/uploads/2017/11/iStock-610873868-1080x675.jpg);
-    background-size: cover;
-    background-position: bottom;
-    animation: fadein 5s;
-
-
-
-}
-
-#insidesec3{
-    background-color:rgba(218, 215, 28, 0.3);
-    height: 300px;
-    padding-top: 50px;
-}
-
-#insidesec3 p{
-    font-size: 40px;
-    padding-top: 40px;
-    padding-left: 180px;
-    color: white;
-}
-
-#insidesec3 img{
-    float: right;
-    height: 90%;
-    width: 25%;
-    margin-right: 10%;
-    cursor: pointer;
-    transition: transform 1s ease-out;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-
-
-}
-
-#insidesec3 img:hover{
-    transform: scale(1.1);
-
-}
-
-
-#sentence{
-    font-size: 40px;
-    padding-left: 180px;
-    color: white;
-
-}
 /* aymaaaaaaaaaaaaaaan */
-@media (max-width: 768px){
+/* @media (max-width: 768px){
     .container {
         display: grid;
         grid-template-columns: 1fr;
@@ -373,12 +84,12 @@ header{
 .column1:hover{
     transform: scale(1.04);
     /* background-color: black; */
-    transition: 860ms;
-}
-.column2:hover{
+    /* transition: 860ms;
+} */
+/* .column2:hover{
     transform: scale(1.04);
     /* background-color: black; */
-    transition: 860ms;
+    /* transition: 860ms;
 }
 .columnList{
     list-style: none;
@@ -447,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     /* font-weight: 400; */
-    color: #7d7d7f;
+    /* color: #7d7d7f;
     line-height: 1.4;
     margin-bottom: 3%;
 }
@@ -456,9 +167,9 @@ span {
     font-family: 'Roboto', sans-serif;
     font-size: 48px;
     /* font-weight: 700; */
-    color: #FFF;
-    margin-bottom: 8%;
-}
+    /* color: #FFF;
+    margin-bottom: 8%; */
+/* }
  .table-left,  .table-right {
     padding: 20px 20px 50px 20px;
     margin: 0 auto;
@@ -466,75 +177,10 @@ span {
     background-color: #222225;
     border: transparent;
     width: 100%;
-}
-/* aymaaaaaaaaaaaaaan */
-footer{
-    height: 240px;
-    background-color: #141414;
-}
-footer li a {
-    display: inline-block;
-}
-#first{
-    text-align: center;
-    float: left;
-    margin-left: 5%;
-    font-size: 20px;
-    padding: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 25px;
-}
-#second{
-    text-align: center;
-    float: right;
-    font-size: 20px;
-    margin-right: 20%;
-    padding: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 25px;
-}
-#third{
-    /* text-align: center; */
-    padding: 20px;
-margin-right: 500px;
-margin-left: 500px;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 25px;
-    width: 135px;
-    text-align: center;
-}
-.hd{
-    color:gray;
-}
-.hd:hover {
-    color: gray;
-    transition: 900ms;
-}
-/* #three{
-    padding: 10px;
-    font-size: 20px;
 } */
-.dot{
-    color: honeydew;
-}
-.dot:hover{
-    cursor: pointer;
-    color:#c7c405;
-    opacity: 30%;
-    font-size: 20px;
-}
-.a:hover{
-    filter: drop-shadow(0 0 0.85rem #c7c405);
-
-    /* transition: 400ms; */
- 
-}
-footer{
-    margin-top: 30pc;
-}
+/* aymaaaaaaaaaaaaaan */
 /* Footer end */
-.button {
+/* .button {
     background-color: rgb(197, 24, 24);
     border: none;
     color: #FFFFFF;
@@ -568,4 +214,392 @@ footer{
   .button:hover:after {
     height: 100%;
     width: 100%;
-  }  
+  }  */
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+  @import url('https://fonts.googleapis.com/css?family=Bangers|Kalam|Luckiest+Guy|Shadows+Into+Light&display=swap');
+  
+  * {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: black;
+   
+    font-family: 'Roboto', sans-serif;
+   
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  p {
+    margin: 0.75rem 0;
+  }
+  
+  /* Utility Classes */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+    
+  }
+  
+  .text-center {
+    text-align:center;
+  }
+  
+  .text-primary {
+    color: wheat;
+    
+  }
+  
+  .bg-light {
+    background: rgba(17, 17, 17, 0.1);
+    color: rgb(68, 0, 0);
+  }
+  
+  .bg-dark {
+    background: rgb(68, 0, 0);
+    color: #fff;
+  }
+  
+  .bg-primary {
+    background: white;
+    opacity: 1;
+    color: #fff;
+  }
+  
+  .l-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+  
+  .m-heading {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+  
+  .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .py-1 { padding: 1.5rem 0; }
+  .py-2 { padding: 2rem 0; }
+  .py-3 { padding: 3rem 0; }
+  
+  .p-1 { padding: 1.5rem; }
+  .p-2 { padding: 2rem; }
+  .p-3 { padding: 3rem; }
+  
+  .btn {
+    display: inline-block;
+    color: #fff;
+    background: rgb(68, 0, 0);
+    padding: 0.5rem 2rem;
+    border: solid white;
+    padding: 1% 2% 1% 2%;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background: rgb(68, 0, 0);
+  }
+  
+  .btn-dark {
+    background: rgb(68, 0, 0);
+    color: #fff;
+  }
+  
+  .list {
+    margin: 0.5rem 0;
+    list-style: none;
+  }
+  
+  .list li {
+    padding: 0.5rem 0;
+    border-bottom: #444 dotted 1px;
+  }
+  
+  /* Navbar */
+  #navbar {
+    display: flex;
+    position: sticky;
+    top:0;
+    background: rgb(68, 0, 0);
+    color: #fff;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
+  }
+  
+  #navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  #navbar ul li a {
+    color: #fff;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+  }
+  
+  #navbar ul li a:hover {
+    background: rgb(68, 0, 0);
+    border-radius: 5px;
+  }
+  
+  /* Showcase */
+  #showcase {
+    background: rgb(68, 0, 0) url('https://i.ibb.co/cDpwPp5/yesss.jpg') no-repeat center center/cover;
+    height: 100vh;
+    opacity: 0.7;
+    color: #fff;
+  }
+  
+  
+  #showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    /* Overlay */
+    position: absolute;
+    top: 65px;
+    left:0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* Section: What We Do */
+  #what .items {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  #what .items .item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  #what .items .item i {
+    background: white;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Section: Who We Are */
+  #who {
+    display: flex;
+  }
+  
+  #who div {
+    flex: 1;
+  }
+  
+  #who .who-img {
+    background: url('https://i.ibb.co/bP9WmQt/no.jpg') no-repeat center center/cover;
+  }
+  
+  /* Section: Clients */
+  #clients .items {
+    display: flex;
+  }
+  
+  #clients .items img {
+    display: block;
+    margin: auto;
+    width: 60%;
+  }
+  
+  /* Section: Contact */
+  #contact {
+    display: flex;
+  }
+  
+  #contact .map, #contact .contact-form {
+    flex: 1;
+  }
+  
+  #contact .contact-form .form-group {
+    margin: 0.75rem;
+  }
+  
+  #contact .contact-form label {
+    display: block;
+  }
+  
+  #contact .contact-form input,
+  #contact .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .container1{
+    margin-left: 11%;
+    margin-bottom: 6%;
+    margin-top: 6%;
+    
+  
+  }
+  
+  .column1{
+  
+    border: solid white;
+  
+    padding: 5% 6% 1% 5%;
+    display:inline-block;
+    margin: 0% 6% 6% 0%;
+    background-color: rgb(68, 0, 0);
+    color: #fff;
+    transition: transform 1s;
+    margin-left: 3%;
+    line-height: 1.4;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    border-radius: 60px;
+    box-shadow: 5px 10px #888888;
+  
+  
+  
+    
+    
+  }
+  .column2{
+    border: solid white;
+    margin-left: 3%;
+    
+  
+    padding: 5% 5% 1% 5%;
+    display:inline-block;
+    background-color: rgb(68, 0, 0);
+    color: #fff;
+    transition: transform 1s;
+  
+    line-height: 1.4;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    border-radius: 60px;
+  
+    box-shadow: 5px 10px #888888;
+  
+  
+  
+  
+  
+  }
+  .btn-action{
+    display: inline-block;
+    color: #fff;
+    background: black;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    -webkit-transition: 200ms;
+      -moz-transition: 200ms;
+      -o-transition: 200ms;
+      transition: 200ms;
+      transition: transform 1s;
+      box-shadow: 2px 4px red;
+  
+  
+  }
+  #fo{
+    font-size: 50px;
+    margin-left: 30%;
+    text-shadow: 2px 2px #FF0000;
+  
+  }
+  #ex{
+    font-size: 50px;
+    margin-left: 9%;
+    text-shadow: 2px 2px #FF0000;
+  
+  }
+  li{
+    padding: 3% 0% 3% 0%;
+  }
+  .wow{
+   margin-left: 35%;
+  
+  }
+  .wow1{
+    margin: 3%;
+    margin-left: 15%;
+  
+  
+  }
+  .btn-action:hover{
+    transform: scale(1.1);
+    transition: 860ms; 
+    background-color: rgb(68, 0, 0);
+  
+  }
+  .column1:hover{
+    transform: scale(1.04);
+    background-color: rgb(24, 23, 23);
+    transition: 860  ease-out;
+  }
+  .column2:hover{
+    transform: scale(1.04);
+    background-color: rgb(24, 23, 23) ;
+    transition: 860ms;
+  }
+  .btn-action{
+    margin-left: 31%;
+    margin-top: 5%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* 
+  
+  @-webkit-keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  } */
+  
+  /* Standard syntax */
+  @keyframes example {
+    0%   {background-color: rgb(3, 33, 34);}
+    25%  {background-color: rgb(76, 195, 20);}
+    50%  {background-color: rgb(255, 94, 0);}
+    100% {background-color: red}
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -35,6 +35,10 @@ html{
         width: 90%;
         height: 36pc;
     }
+    .machine-pic{
+        width: 84%;
+        height: 71vh;
+    }
  } 
  .results{
      /* background-color: rgb(197, 24, 24); */
@@ -69,11 +73,15 @@ html{
  #resultImage , .machine-pic{
      width: 85%;
      height: auto;
-     margin: 10%;
+     /* margin: 10%; */
      background-color: white;
-     margin-right: 8%;
+     /* margin-right: 8%; */
      margin-top: 8%;
  }
+ .machine-pic{
+    width: 84%;
+    height: 71vh;
+}
  #resultImage {
     width: 85%;
     height: 50vh;
@@ -81,6 +89,7 @@ html{
     background-color: white;
     margin: 26px auto;
 }
+
 
  .food-result-list{
      font-family: 'Roboto', sans-serif;
@@ -90,7 +99,7 @@ html{
      padding: 0;
      font-size: 18px;
  }
- input , select{
+ /* input , select{
     border: 0;
     border-bottom: 1px solid #313131;
     width: 88%;
@@ -102,7 +111,7 @@ html{
 input:hover , select:hover , input:focus , select:focus , input:checked , select:checked{
     box-shadow: 0 0px 8px #250404;
     /* margin: 3% 3% 3% 10%; */
-}
+/* } */ */
  .food-result-h{
      font-size: 95%;
      font-family: 'Roboto', sans-serif;

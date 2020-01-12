@@ -37,7 +37,7 @@
                     <li>Meal Name: <%= meal.title %> </li>
                     <li>Ready in minutes: <%= meal.readyInMinutes %> </li>
                     <li>Serving: <%= meal.servings %> </li>
-                    <img  id="resultImage"src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0]%>" >
+                    <img  id="resultImage"src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0] %>" >
                 </ul>
             </div>
             <% }) %>
@@ -47,13 +47,14 @@
 <div class="exercise-Section">
                 <li> machine name: <%= val.machine%> </li>
                 <li> catagory : <%= val.catagory %> </li>
-                <img id="resultImage" src="<%= val.url %>">
-                <form action="<%=`/delete/${val.id}?_method=DELETE`%>"method="POST">
+                <img id="resultImage" src="<%= val.url %>" >
+                
+                <form action="<%=`/delete/${val.machine}?_method=DELETE`%>"method="POST">
                 <button  class="button">Delete</button>
             </form>
-                <form action="<%=`/update/${val.id}_method=PUT`%>" method="POST" id="update-form">
-                    <button class="button" id="update">update</button> <br>
-                    <label for="">machine name</label>
+            <form action="<%=`/update/${val.machine}_method=PUT`%>" method="POST" id="update-form">
+                <button class="button" id="update">update</button> <br>
+                <label for="">machine name</label>
                     <input type="text" name="machine" value="<%=val.machine %>">
                 </form>
             </div>

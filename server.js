@@ -151,46 +151,46 @@ function addToDataBase(req , res){
 
 
 
-server.get('/addMachine:table_id' , getmachineById)
+server.get('/addMachine:table_machine' , getmachineById)
 
 // ///////////////////////////// 
 function getmachineById(req , res) {
-    let id = req.params.machine_id;
-    let SQL = `SELECT * FROM machine WHERE id=$1 ;`;
-    let values = [id];
+    let machine = req.params.machine_name;
+    let SQL = `SELECT * FROM machine WHERE machine=$1 ;`;
+    let values = [machine];
     return client.query(SQL , values)
     .then((data)=>{
       res.render('pages/profile/mystatus' , { machineChouse : data.rows[0]})
     })
 }
 /////////// update the machine ////////
-server.put( '/update/:machine_id' , updateMachine);
+server.put( '/update/:machine_name' , updateMachine);
 
 function updateMachine(req , res) {
     let {machine} = req.body ;
     console.log(machine)
-    let SQL = `UPDATE machine SET machine=$1 WHERE id=$2;`;
-    let values = [machine ,req.params.machine_id];
+    let SQL = `UPDATE machine SET machine=$1 WHERE machine=$2;`;
+    let values = [machine ,req.params.machine_name];
     return client.query(SQL , values)
   .then(()=>{
-     return res.redirect(`/mystatus/${req.params.machine_id}`);
+     return res.redirect(`/mystatus/${req.params.machine_name}`);
   })
 }
 
 // new route to delete data from database for food
-server.delete('/delete/:the_food' , deleteFood) ;
-function deleteFood(req , res){
-  let SQL = 'DELETE FROM food WHERE id=$1 ;' ;
-  let values = [req.params.the_food] ;
-  return client.query(SQL , values)
-    .then(() => {
-      return res.redirect('pages/profile/mystatus');
-    })
-}
+// server.delete('/delete/:the_food' , deleteFood) ;
+// function deleteFood(req , res){
+//   let SQL = 'DELETE FROM food WHERE id=$1 ;' ;
+//   let values = [req.params.the_food] ;
+//   return client.query(SQL , values)
+//     .then(() => {
+//       return res.redirect('pages/profile/mystatus');
+//     })
+// }
 // new route to delete data from database for exercise
 server.delete('/delete/:the_machine' , deleteMachine) ;
 function deleteMachine(req , res){
-  let SQL = 'DELETE FROM machine WHERE id=$1 ;' ;
+  let SQL = 'DELETE FROM machine WHERE machine=$1 ;' ;
   let values = [req.params.the_machine] ;
   return client.query(SQL , values)
     .then(() => {

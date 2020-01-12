@@ -1,158 +1,197 @@
+<a href="/newMeal"> Get Meal Plan :) </a>
+<a href="/newExc"> Get excercise </a>
+<a href="/profile"> My Profile </a>
+ 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<link rel="stylesheet" href="../public/styles/style.css">
-<link rel="stylesheet" href="../public/styles/base.css">
-<link rel="stylesheet" href="../public/styles/layout.css">
-<link rel="stylesheet" href="../public/styles/modules.css">
-<head>
-    <%- include('./partials/head') %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="public/styles/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="public/styles/mobile.css">
+  <link rel="stylesheet" media="screen and (min-width: 1100px)" href="public/styles/widescreen.css">
+  <title>EdgeLedger Financial | Accounting & Investment</title>
 </head>
-</head>
-<body>
+<body id="home">
+  <!-- Navbar -->
+  <nav id="navbar">
+    <h1 class="logo">
 
-    <!-- //////////////////////// from w3school //////////////////// -->
-  <!-- <div class="mobile-container">
-
-     Top Navigation Menu -->
-    <!-- <div class="topnav">
-      <div id="myLinks">
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
+      <span class="text-primary" style="font-family: 'Shadows Into Light', cursive;
+      ">
+     A3M</span>      
+    </h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#what">What</a></li>
+      <li><a href="#who">Who</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Header: Showcase -->
+  <header id="showcase">
+    <div class="showcase-content">
+      <h1 style="font-family: 'Kalam', cursive; color: blanchedalmond;
+      " class="l-heading">
+        The Sky Is The Limit
+      </h1>
+      <p style="font-family: 'Kalam', cursive; color:white;
+      " class="lead">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptatibus debitis praesentium inventore, eum deserunt.
+      </p>
+    <a href="/profile"  class="btn"> My Profile </a>
+ 
     </div>
-    <script>
-    function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-} --> 
-    <%- include('./partials/header') %>
-    <main>
-        <div class="header-for-main">
-       <img src="public/image/fitness9.jpg" alt="">
-       <img src="public/image/fitness8.jpg" alt="">
-        </div>
-        <section id="sec1" >
-            <h2>IF NOT NOW ... <br> THEN WHEN ??</h2>
-            <section id="insidesec1">
-                <p>NOTHING TRULY GREAT <br> EVER COME <br> FROM A COMFORT ZONE</p>
-            </section>
+  </header>
 
-        </section>
-    <h1>main page</h1>
-    <a href="/newMeal"> Get Meal Plan :) </a>
-    <a href="/newExc"> Get excercise </a>
-    <a href="/profile"> My Profile </a>
+  <!-- Section: What We Do -->
+  <section id="what" class="bg-light py-1">
 
-        <section id="sec2">
-            <!-- <img id="model2" src="https://i.ibb.co/fQ0FSh5/1368958-fitness-png-file-fitness-png-1100-934-preview.png"
-                alt=""> -->
-            <section id="insidesec2">
-                <p id="p">DO you think you have the suitable body shape ? <br> What does the correct diet mean .?? </p>
-                <h2>NEVERMIND !!!</h2>
-                <p>With the help of our page you will <br> give more attention to your life style <br> espicially your
-                    body and food !! </p>
-            </section>
-        </section>
-
-
-        <section id="sec3">
-            <section id="insidesec3">
-                <!-- <img onclick="location.href='list.html';"
-                    src="https://i1.wp.com/laprensaaustin.com/wp-content/uploads/2019/07/dsds.png?ssl=1" alt=""> -->
-                <h6 id="sentence">Git Your Free Workout NOW</h6>
-                <p> You choose your own life <br> The fact that you entered our website <br> means you want a new life
-                    and we <br> will give you a Healthy one . </p>
-            </section>
-
-        </section>
-        <!-- <a href="/newMeal">the form page</a> -->
-        <div class="container">
-          <div class="pricing-intro">
-            <h1 class="">Our Package</h1>
-            <p class="">Those who think they have not time for bodily exercise will sooner or later have to find time for illness.
-               </p>
+    
+    <div class="container">
+      <h2 class="m-heading text-center"><span class="text-primary" style="color: white;">What</span> We Do</h2>
+      <div class="items">
+        
+        <div class="item">
+          <i class="fas fa-university fa-2x" ></i>
+          <div>
+            <h3>Health Care Company</h3>
+            <p>We offer you all the services that make you healthy and healthy</p>
           </div>
+        </div>
+        <div class="item">
+            <i class="fas fa-book-reader fa-2x"></i>
+            <div>
+              <h3>Healthy Food</h3>
+              <p>Providing a diet program that suits your body specifications and the way you sleep</p>
+            </div>
+        </div>
+        <div class="item">
+            <i class="fas fa-pencil-alt fa-2x"></i>
+            <div>
+              <h3>Health information</h3>
+              <p>General information about health and how to live a good way</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Who We Are -->
+  <section id="who">
+    
+    <div class="who-img"></div>
+    
+    <div class="who-text bg-dark p-2">
+      <h2 class="m-heading"><span class="text-primary">Who</span> We Are</h2>
+      <p>We are a team of 4 people serving you to become healthy and happy life. This is a major reason for you to have confidence in yourself.</p>
+      <h3>Our Team</h3>
+      <ul class="list">
+        <li>ABD ALRAHMAN: CEO</li>
+        <li>AYMAN: CFO</li>
+        <li>MOHAMMAD: Lead Accountant</li>
+        <li>ASHAR: Investment Manager</li>
+      </ul>
+    </div>
+    
+    
+  </section>
+
+  <!-- Section: Clients -->
+    <div class="container1">
+      <div class="col-md-12 col-sm-12 nopadding">
+        <div class="pricing-intro">
+          <h1 class="wow" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;">Our Package</h1>
+          <p class="wow1" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Those who think they have not time for bodily exercise will sooner or later have to find time for illness.
+             </p>
+        </div>
         <div class="column1">
-          <div class="table-left " >
-              <span>FOOD</span>
+          <div class="table-left " data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+            <div class="pricing-details">
+              <span id="fo" style="color: black; font-family: 'Sigmar One', cursive;
+              " >FOOD</span>
               <ul class="columnList">
-                <li>Food is an important part of a balanced diet</li>
-                <li>Take care of your body ,It’s the only place you have to live</li>
+                <li>Food is an important thing for our life</li>
+                <li>Take care of your body  ,It’s so important thing </li>
                 <li>have to fight a battle more than once to win it</li>
                 <li>You can have your cake and lose weight, too!”</li>
               </ul>
-              <button class="button"><a href="/newMeal">Get start</a></button>
+            <a href="/newMeal"  class="btn-action">Get start</a>
             </div>
+          </div>
         </div>
-            <div class="column2">
-              <div class="table-right" >
-                  <span>EXERCISES</span>
-                  <ul class="columnList">
-                    <li>You have to want it, you have to plan for it</li>
-                    <li>You don’t get the ass you want by sitting on it</li>
-                    <li>You have to do the work yourself</li>
-                    <li>Think of your workouts as important meetings</li>
-                  </ul>
-                  <button class="button"><a href="/newExercise">Get start</a></button>
-                </div>
-              </div>
-          </div>
-        <!-- aymaaaaaaan  -->
-    </main>
-    <!-- <div class="pricing-section text-center">
-        <div class="container">
-            <div class="pricing-intro">
-              <h1 class="wow fadeInUp">Our Package</h1>
-              <p class="wow fadeInUp">Those who think they have not time for bodily exercise will sooner or later have to find time for illness.
-                 </p>
-            </div>
-            <div class="column1">
-              <div class="table-left " data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                <div class="pricing-details">
-                  <span>FOOD</span>
-                  <ul class="columnList">
-                    <li>Food is an important part of a balanced diet</li>
-                    <li>Take care of your body ,It’s the only place you have to live</li>
-                    <li>have to fight a battle more than once to win it</li>
-                    <li>You can have your cake and lose weight, too!”</li>
-                  </ul>
-                  <button class="btn-action"><a href="/newMeal">Get start</a></button>
-                </div>
-            <div class="column2">
-              <div class="table-right" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                <div class="pricing-details">
-                  <span>EXERCISES</span>
-                  <ul class="columnList">
-                    <li>You have to want it, you have to plan for it</li>
-                    <li>You don’t get the ass you want by sitting on it</li>
-                    <li>You have to do the work yourself</li>
-                    <li>Think of your workouts as important meetings</li>
-                  </ul>
-                  <button class="btn-action"><a href="/newExercise">Get start</a></button>
-                </div>
-              </div>
+        <div class="column2">
+          <div class="table-right" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+            <div class="pricing-details">
+              <span id="ex" style="color: black; font-family: 'Sigmar One', cursive;
+              ">EXERCISES</span>
+              <ul class="columnList">
+                <li>You have to want it, you have to plan for it</li>
+                <li>You don’t get the ass you want by sitting on it</li>
+                <li>You have to do the work yourself</li>
+                <li>Think of your workouts as important meetings</li>
+              </ul>
+              <a href="/newExc"  class="btn-action">Get start</a>
+              <!-- <a href="/newExc"> Get excercise </a> -->
             </div>
           </div>
-        </div> -->
-      <!-- aymaaaaaaan -->
-      <section >
- <img src="../public/image/fitness4.jpg" alt="">
-      </section>
-    <footer>
-        <%- include('./partials/footer') %>  
-    </footer>
+        </div>
+      </div>
+    </div>
+   
     
-    <script src="/js/app.js"></script>
-</body>
+    
+  </section>
+  
 
+  <!-- Section: Contact -->
+  <!-- <section id="contact">
+    <div class="contact-form bg-primary p-2">
+      <h2 class="m-heading">Contact Us</h2>
+      <p>Please use the form below to contact us</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Enter Message"></textarea>
+        </div>
+        <input type="submit" value="Send" class="btn btn-dark">
+      </form>
+    </div>
+    <div class="map"></div>
+  </section> -->
+
+  <!-- Footer -->
+  <footer id="main-footer" class="bg-dark text-center py-1">
+    <div class="container">
+      <p>Copyright &copy; 2019, All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- JQuery CDN -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Local JS File -->
+  <script src="js/main.js"></script>
+
+  <!-- Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoZg2Es_GrQHZf_52j2-xZ3cTfBCR0HII&callback=initMap"
+  async defer></script>
+</body>
 </html>
