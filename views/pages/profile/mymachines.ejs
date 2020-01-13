@@ -16,11 +16,11 @@
             <li> catagory:  </li>
             <input type="text" name="catagory" value="<%= val.catagory %>">
             <br>
-            <img src="<%= val.url %>">
+            <img src="<%= val.url? val.url:'https://bitsofco.de/content/images/2018/12/broken-1.png' %>">
             <button type="submit" > Update </button>
-            <button type="submit"> Delete Machine</button>
         </form>
         <form action="/delete_mach/<%= val.id %>?_method=DELETE" method="POST"> 
+            <button type="submit"> Delete Machine</button>
         </form>
 
     <% }) %>

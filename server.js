@@ -46,7 +46,7 @@ function updateMAchine(req , res ){
     console.log('helooo' , values);
     return client.query(SQL , values)
         .then(() => {
-            res.send('Updated')
+            return res.send('Updated')
 
         })
 }
@@ -62,7 +62,7 @@ function deleteMachine(req , res ){
     console.log( 'hiii' , values);
     return client.query(SQL , values)
         .then(() => {
-            res.send('deleted');
+           return res.send('deleted');
         })
 }
 
