@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>result </h1>
+    <!-- food.nutrients -->
+    <div>
+        <h2>You Will Achive This Amount by using our male
+            plan </h2>
+        <br>
+        <form action="/status" method="POST">
+
+            <ul>
+                <li> Your Targeted Calories: </li>
+                <input type="text" value=" <%= food.nutrients.calories %>" name="cal">
+                <br>
+                <li> Protein: </li>
+                <input type="text" value="<%=food.nutrients.protein %>" name="prot">
+                <br>
+                <li> Fat:</li>
+                <input type="text" name="fat" value="<%=food.nutrients.fat %>">
+                <br>
+                <li> Carbs: </li>
+                <input type="text" name="carb" value="<%=food.nutrients.carbohydrates %>">
+                <br>
+                <!-- secret data ha ha ha -->
+                <input type="text" name="array" value="<%= JSON.stringify(food.meals) %>" style="display: none;" >
+            </ul>
+            <button type="submit"> submit </button>
+        </form>
+
+    </div>
+
+    <section>
+        <% food.meals.forEach((val) => { %>
+
+        <div>
+            <ul>
+                <li> Meal Name: <%= val.title %></li>
+                <li> Ready in minutes: <%= val.readyInMinutes %> </li>
+                <li> Serving: <%= val.servings %> </li>
+                <img src="https://spoonacular.com/recipeImages/<%=val.imageUrls[0]%>" alt="<%= val.imageUrls[1] %>">
+            </ul>
+        </div>
+
+        <% }) %>
+    </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <% table.forEach( (val) => { %>
+            <div>
+                <li> calories: <%= val.cal%> </li>
+                <li> protien: <%= val.prot %> </li>
+                <li> fat: <%= val.fat %> </li>
+                <li> carbohydrate: <%= val.carb %> </li>
+
+                <form action="/delete_prog/<%= val.id %>?_method=DELETE" method="POST"> 
+                <button type="submit"> Delete Plan</button>
+                </form>
+
+                <% let jsonData = JSON.parse(val.meals) %>
+                <% jsonData.forEach( (meal) => { %>
+
+                    <li>Meal Name: <%= meal.title %> </li>
+                    <li>Ready in minutes: <%= meal.readyInMinutes %> </li>
+                    <li>Serving: <%= meal.servings %> </li>
+                    <img src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0]%>" >
+
+                <% }) %>
+
+                
+            </div>
+
+       <% }) %>
+
+    </div>
+    
+</body>
+</html>
