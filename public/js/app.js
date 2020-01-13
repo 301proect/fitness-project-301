@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict';
 $(document).ready( function () {
    $('.results').hide();
@@ -31,3 +32,12 @@ $("#add-to-me").click(function() {
     // swal("Success Message Title", "Well done, you pressed a button", "success")
     alert('thanks its add' );
   });
+=======
+'use strict'
+
+
+// the humburger function ...
+$(".menu-opener").click(function(){
+    $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
+  });
+>>>>>>> dev
