@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <% table.forEach( (val) => { %>
+        <form action="/update/<%= val.id %>?_method=PUT" method="POST">
+
+            <li> machine name:  </li>
+            <input type="text" name="mname" value="<%= val.machine%>">
+            <br>
+            <li> catagory:  </li>
+            <input type="text" name="catagory" value="<%= val.catagory %>">
+            <br>
+            <img src="<%= val.url %>">
+            <button type="submit" > Update </button>
+            <button type="submit"> Delete Machine</button>
+        </form>
+        <form action="/delete_mach/<%= val.id %>?_method=DELETE" method="POST"> 
+        </form>
+
+    <% }) %>
+
+</body>
+</html>

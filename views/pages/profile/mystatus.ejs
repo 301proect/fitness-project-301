@@ -16,6 +16,10 @@
                 <li> fat: <%= val.fat %> </li>
                 <li> carbohydrate: <%= val.carb %> </li>
 
+                <form action="/delete_prog/<%= val.id %>?_method=DELETE" method="POST"> 
+                <button type="submit"> Delete Plan</button>
+                </form>
+
                 <% let jsonData = JSON.parse(val.meals) %>
                 <% jsonData.forEach( (meal) => { %>
 
@@ -26,10 +30,7 @@
 
                 <% }) %>
 
-                <li> machine name: <%= val.machine%> </li>
-                <li> catagory : <%= val.catagory %> </li>
-                <img src="<%= val.url %>">
-
+                
             </div>
 
        <% }) %>

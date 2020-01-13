@@ -18,15 +18,71 @@ server.use(cors());
 var request = require("request");
 
 const PORT = process.env.PORT || 3000;
+const methodOverride = require('method-override');
 
 // middleware 
 server.use(express.urlencoded({ extended: true }));
 server.set('view engine', 'ejs');
+server.use('/public', express.static('public'));
+server.use(methodOverride('_method'));
+
+
+
+
+//about us 
+server.get('/about' , (req , res ) => {
+    res.render('pages/profile/aboutus')
+})
+
+
+//update machine name
+server.put('/update/:mach_name' , updateMAchine);
+
+function updateMAchine(req , res ){
+    let {mname , catagory} = req.body ;
+    let SQL = 'UPDATE machine SET machine=$1, catagory=$2 WHERE id=$3;' ;
+    let values = [mname , catagory , req.params.mach_name];
+
+    console.log('helooo' , values);
+    return client.query(SQL , values)
+        .then(() => {
+            res.send('Updated')
+
+        })
+}
+
+
+
+//delete machine 
+server.delete('/delete_mach/:mach_id' , deleteMachine) ;
+function deleteMachine(req , res ){
+    let SQL = 'DELETE FROM machine WHERE id=$1 ;' ;
+    let values = [req.params.mach_id] ;
+
+    console.log( 'hiii' , values);
+    return client.query(SQL , values)
+        .then(() => {
+            res.send('deleted');
+        })
+}
+
+
+
+//machine profile
+server.get('/machine_profile' , (req , res ) => {
+    let sql = 'SELECT * FROM machine ;' ;
+    return client.query(sql)
+        .then((data) => {
+            console.log(data.rows);
+            res.render('pages/profile/mymachines' , {table : data.rows});
+        })
+}) 
+
 
 
 // profile page 
 server.get('/profile' , (req , res ) => {
-    let sql = 'SELECT * FROM food,machine ;' ;
+    let sql = 'SELECT * FROM food ;' ;
     return client.query(sql)
         .then((data) => {
             console.log(data.rows);
@@ -36,12 +92,25 @@ server.get('/profile' , (req , res ) => {
 
 
 
+// delete the meal plan :)
+server.delete('/delete_prog/:meal_id' , deleteMeal) ;
 
+function deleteMeal(req , res){
+    // let requested = parseInt(req.params.meal_id) ;
+    let SQL = 'DELETE FROM food WHERE id=$1 ;' ;
+    let values = [req.params.meal_id] ;
+
+    console.log(values);    
+     client.query(SQL , values)
+    .then(() => {
+        res.send('deleted !!!');
+    })
+}
 
 // add machine info to database
 server.post('/addMachine' , addToDataBase) ;
 function addToDataBase(req , res){
-    // console.log(req.body)
+    console.log(req.body)
     let {machine , catagory , url } = req.body ;
     let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
     let values = [machine , catagory , url] ;

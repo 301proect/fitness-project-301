@@ -1,0 +1,291 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#w1{
+  background: url("http://dslv9ilpbe7p1.cloudfront.net/ocBwYFiOwKrr65Oi4zURqg_store_banner_image.jpeg") no-repeat center fixed;
+  background-size: cover ;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+#w2{
+  background: url("https://wallpapercave.com/wp/wp2631591.jpg") no-repeat center fixed;
+  background-size: cover ;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+
+}
+
+a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-opener, .menu-opener:hover, .menu-opener.active, .menu-opener-inner, .menu-opener-inner::before, .menu-opener-inner::after, .menu, .menu.active {
+  transition: 250ms all;
+}
+
+.menu-opener {
+  cursor: pointer;
+  height: 64px;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  user-select: none;
+  width: 64px;
+  z-index: 2;
+}
+.menu-opener:hover, .menu-opener.active {
+  background: #f10f0f;
+}
+
+.menu-opener-inner {
+  background: #fff;
+  height: .5rem;
+  margin-left: .75rem;
+  margin-top: 1.75rem;
+  width: 2.5rem;
+}
+.menu-opener-inner::before, .menu-opener-inner::after {
+  background: white;
+  content: '';
+  display: block;
+  height: .5rem;
+  width: 2.5rem;
+}
+.menu-opener-inner::before {
+  transform: translateY(-0.75rem);
+}
+.menu-opener-inner::after {
+  transform: translateY(0.25rem);
+}
+.menu-opener-inner.active {
+  background: transparent;
+}
+.menu-opener-inner.active::before {
+  transform: translateY(0rem) rotate(-45deg);
+}
+.menu-opener-inner.active::after {
+  transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
+}
+
+.menu {
+  background: #f10f0f;
+  color: transparent;
+  height: 64px;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  user-select: none;
+  width: 0rem;
+  z-index: -1;
+}
+.menu.active {
+  width: calc(100% - 2rem);
+  z-index: 1;
+}
+.menu.active .menu-link {
+  color: white;
+}
+
+.menu-inner {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  margin-left: 4rem;
+  padding: 0;
+}
+
+.menu-link {
+  color: transparent;
+  display: flex;
+  flex: 1 1 auto;
+  font-size: 2rem;
+  font-weight: 100;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+.menu-link li {
+  margin: auto;
+}
+
+/*  for phone user >>> */
+@media screen and (max-width: 768px) {
+  #contain {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: auto 5% auto 5% auto;
+  }
+  
+  #sec1{
+    grid-column: 1 / span 3 ;
+    grid-row: 1;
+  }
+  
+  #sec1 h1{
+    margin-top: 35vh;
+    color: rgb(255, 255, 255 , 0.9);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: bold;
+    filter: drop-shadow(0 0 0.75rem rgb(80, 77, 77));
+  }
+  
+  #sec1 p {
+    grid-row: 2;
+    grid-column: 2;
+    color: rgb(248, 3, 3 );
+    text-align: center;
+    margin-top: 1vh;
+    position: top ;
+  }
+  
+  #profileB {
+    text-align: center;
+    margin-top: 5vh;
+  }
+  
+  
+  #sec2{
+    grid-column: 1 / span 3 ;
+    grid-row: 3;
+  }
+  
+  
+  
+  .first {
+    display: block;
+    /* box-sizing: border-box; */
+    background: url("https://8djjb4xixg-flywheel.netdna-ssl.com/wp-content/uploads/2017/05/Website-Full-Screen-Background.jpg") no-repeat ;
+    background-size: cover ;
+    height: 100vh;
+  }
+  
+  .menu {
+    height: auto;
+    z-index: 1;
+}
+.menu-opener{
+z-index: 2;
+}
+.menu-inner {
+    display: block;
+    z-index: 1;     
+  }
+  .menu-link {
+    padding: 10px 0;
+    font-size: 1.2em;
+  }
+  .menu.active {
+    width: calc(100% - 0.5rem);
+  }
+  
+  #logo{
+    background: black;
+    background-image: url("https://media2.giphy.com/media/PlyibXHFkQUF31Mx3X/source.gif") ;
+      background-size: 100%;
+      height: 157px;
+  }
+  #logo img {
+    animation-name: heartbeat;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+  }
+  
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/* for disktop user >>>  */
+@media screen and (min-width: 769px) {
+
+  #logo{
+    
+    background: black;
+    height: fit-content;
+    text-align: center;
+
+
+}
+
+#logo img {
+  animation-name: heartbeat;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+#contain {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: auto 25% auto 10% auto;
+}
+
+#sec1{
+  grid-column: 1 / span 3 ;
+  grid-row: 1;
+  background: url("https://8djjb4xixg-flywheel.netdna-ssl.com/wp-content/uploads/2017/05/Website-Full-Screen-Background.jpg") no-repeat ;
+  background-size: cover ;
+  height: 100vh;
+
+}
+
+#sec1 h1{
+  margin-top: 35vh;
+  color: rgb(255, 255, 255 , 0.9);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: bold;
+  filter: drop-shadow(0 0 0.75rem rgb(80, 77, 77));
+}
+
+#sec1 p {
+  grid-row: 2;
+  grid-column: 2;
+  color: rgb(248, 3, 3 );
+  text-align: center;
+  margin-top: 1vh;
+}
+
+#profileB {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+
+#sec2{
+  grid-column: 1 / span 3 ;
+  grid-row: 3;
+  background: url("https://8djjb4xixg-flywheel.netdna-ssl.com/wp-content/uploads/2017/05/Website-Full-Screen-Background.jpg") no-repeat ;
+  background-size: cover ;
+  height: 100vh;
+
+}
+
+
+}
+
+
+/*  animation for the logo  */
+/* @keyframes heartbeat {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.9);}
+  100% {transform: scale(1);}
+} */
+
