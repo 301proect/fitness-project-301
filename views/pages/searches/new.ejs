@@ -4,24 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>food Form</title>
+    <link rel="stylesheet" href="../public/styles/style.css">
+<link rel="stylesheet" href="../public/styles/base.css">
+<link rel="stylesheet" href="../public/styles/layout.css">
+<link rel="stylesheet" href="../public/styles/modules.css">
+<link rel="stylesheet" href="public/styles/form.css">
 </head>
 
 <body>
-<header>Inputs . . .</header>
+   
 <main>
-    <form action="/mealLest" method="POST" >
 
-    <!-- <input type="radio" name="time" value="day"> -->
-    <!-- <input type="radio" name="time" value="week"> -->
+ <!------------------------------------------- cal form  --------------------------------->
+<div class="calc-outer-wrap">
+    <div id="form-error" style="display:none;"></div>
+    <form class="calc-form" id="calc-form">
+      <fieldset id="call">
+      <div class="form-fields">
+    
+        <div class="field-outer">
+          <div class="field-items">
+              <h2  class="herader-form"> Calculate Your calories</h2>
+              <br/>
+            <div class="field field-large">  
+              <label for="">  Age:  </label>       
+              <input  class="food-input"type="text" name="age" id="age" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your age please ">
+            </div><!--  /.field-large -->
+            
+            <div class="field field-medium">
+              <label for="">Gender:</label>
+              <select name="gender" class="food-input">
+                  <option value="defult">Select your gender</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                       
+              </select>
+              
+            </div><!--  /.field-small -->
+          </div><!--  /.field-items -->
+        </div><!--  /.field-outer -->
 
-    <input type="text" name="calories"  placeholder="calories">
-    <input type="text" name="dietType" placeholder="diet type ex(vegetarian)">
-    <input type="text" name="spicial" placeholder="allergens or ingredients that must be excluded">
-    <button type="submit"> Submit</button>
+        <div class="field-outer">
+            <div class="field-items">
+             <div class="field">
+               <label for="">Height in CM:</label>
+               <input class="food-input" type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your height">
+              </div><!--  /.field -->        
+            </div><!--  /.field-items -->
+          </div><!--  /.field-outer -->
+    
+    
+        <div class="field-outer">
+          <div class="field-items">
+            <div class="field field-large">
+              <label for="">Your weight: </label>
+              <input class="food-input" type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*" placeholder="Enter your Weight">
+              <select name="weight_unit" class="weight_unit">
+                <option value="lb">lb</option>
+                <option value="kg">kg</option>
+              </select>
+            </div><!--  /.field-large -->
 
-</form>
+          </div><!--  /.field-items -->
+        </div><!--  /.field-outer -->
+       <div class="btn-wrap field-outer">
+        <button  class="button" id=".add-item" value="cal-result">Calculate</button>
+      </div>
+      </div><!--  /.form fields -->
+    
+    </fieldset>
+    </form>
+    <div id="results" style="display:none;"></div>
+    </div><!--  /.calc-outer-wrap -->
+
+    
+ <!-- ==================================================information form ================================= -->
+<div id="results" style="display:none;"></div>
+<form action="/mealLest" method="POST" class="foodForm" >
+    <fieldset>
+        <h2 class="herader-form"> Please Select Your Information</h2> <br>
+        <!-- <input type="radio" name="time" value="day"> -->
+        <!-- <input type="radio" name="time" value="week"> -->
+        <label for="">Your Name :</label>
+    <input class="food-input" type="text" name="userName" id="user" placeholder="Enter your name please" required> <br>
+    <label for=""> Calories:</label>
+      <input  class="food-input" type="number" name="calories" value="cal-result" placeholder="Write the calories Please ">
+      <label for="">Diet Type:</label>
+        <select  class="food-input" name="dietType" id="dietType" required>Diet Type 
+            <option value="defult"> Select Diet Type .. </option>
+            <option value="vegetarian">vegetarian</option>
+            <option value="Low-Carb Diets">Low-Carb Diets</option>
+            <option value="The Paleo Diet">The Paleo Diet</option>
+            <option value="The Vegan Diet">The Vegan Diet</option>
+        </select>
+        <label for=""> Spicial Satuation</label>
+        <input class="food-input" type="text" placeholder="Select If you have Spicial Satuation (allergic .. etc)">
+      </div><!--  /.field-outer -->
+        <button type="submit" class="button"> Submit</button>
+   
+    </fieldset>
+   </form>
 </main>
-
+<footer>
+   
+</footer>
+<script src="public/js/cal.js"></script>
 </body>
 </html>

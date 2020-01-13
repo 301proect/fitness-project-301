@@ -1,0 +1,192 @@
+/* =========================== result section ============================= */
+@import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
+html{
+    background-color: rgba(0, 0, 0, 0.774);
+}
+@media (max-width: 768px){
+    main{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .machine-pic{
+        margin-right: 10%;
+    }  
+}
+ @media (min-width: 768px){
+ main{
+     display: grid;
+     grid-template-columns: auto auto;
+ }
+ } 
+.food-Result-1{
+    text-align: center;
+    line-height: 2pc;
+ }
+ .food-result-list-client{
+     list-style-type: none;
+     font-size: 20px;
+ }
+ @media (min-width: 768px){
+    .all-food-section{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .food-result-list{
+        width: 90%;
+        height: 36pc;
+    }
+    .machine-pic{
+        width: 84%;
+        height: 71vh;
+    }
+ } 
+ .results{
+     /* background-color: rgb(197, 24, 24); */
+     display: grid;
+     grid-template-columns: auto ;
+  grid-template-rows: auto auto auto auto;
+ }
+ .food-Section ,.food-Result-1 , .machine-form-result{
+     color: white;
+     font-family: 'Roboto', sans-serif; 
+     font-size: 20px;
+     width: 90%;
+     background-color: #222225;
+     box-shadow: 0 0px 8px #250404;
+     margin: 3% 3% 3% 7%;
+     list-style-type: none;
+    }
+    .food-Result-1{
+        width: 47%;
+        /* height: 30%; */
+        padding: 1%;
+        margin: 25px auto;
+    }
+    .food-result-list-client{
+        /* width: 70%; */
+        height: 11%;
+        /* padding: 3%;  */
+    }
+    .food-Section:hover{
+     transform: scale(1.01);
+     transition: 860ms; 
+ }
+ #resultImage , .machine-pic{
+     width: 85%;
+     height: auto;
+     /* margin: 10%; */
+     background-color: white;
+     /* margin-right: 8%; */
+     margin-top: 8%;
+ }
+ .machine-pic{
+    width: 84%;
+    height: 71vh;
+}
+ #resultImage {
+    width: 85%;
+    height: 50vh;
+    /* margin: 3%; */
+    background-color: white;
+    margin: 26px auto;
+}
+
+
+ .food-result-list{
+     font-family: 'Roboto', sans-serif;
+     list-style-type: none;
+     text-align: center;
+     line-height: 30px;
+     padding: 0;
+     font-size: 16px;
+ }
+ .food-result-h{
+     font-size: 95%;
+     font-family: 'Roboto', sans-serif;
+ }
+ .machine-form-result{
+    width: 50%;
+    /* grid-column: 2;
+    grid-row: 1; */
+    background-color: #222225;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 20px;
+    width: 75%;
+    background-color: #222225;
+    box-shadow: 0 0px 8px #250404;
+    margin: 3% 3% 3% 10%;
+}
+.machine-form-result ul{
+    list-style-type: none;
+
+ }
+ .button {
+    background-color: rgb(197, 24, 24);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    background: rgb(197, 24, 24);
+    /* border-color: rgb(197, 24, 24); */
+    border-radius: 30px;
+    font-size: 80%;
+    width: 50%;
+    padding: 15px 42px;
+    transition: 200ms;
+    margin-left: 6%;
+    margin-top: 2pc;
+    margin-bottom: 5%;
+    color: #FFFFFF;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  .button:before,
+  .button:after {
+    border: 0 solid transparent;
+    transition: all 0.25s;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+  }
+  .button:before {
+    border-top: 2px solid rgb(197, 24, 24);
+    left: 0px;
+    top: -5px;
+  }
+  .button:after {
+    border-bottom: 2px solid rgb(197, 24, 24);
+    bottom: -5px;
+    right: 0px;
+  }
+  .button:hover {
+    background-color: rgb(197, 24, 24);
+  }
+  .button:hover:before,
+  .button:hover:after {
+    height: 100%;
+    width: 100%;
+  }  
+  
+  .list-one{
+      width: 70%;
+      padding: 1%;
+      margin: 0%;
+      font-size: 15px;
+      background:none ;
+      color: white;
+    border: none;
+    width: 100%;
+    box-shadow: 0 0px 8px #250404;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; 
+  }
+  .list-one:hover{
+    transform: scale(1.01);
+    transition: 860ms; 
+  }

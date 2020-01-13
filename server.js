@@ -7,10 +7,11 @@ const express = require('express');
 const superagent = require('superagent');
 // cross origin resourses sharing 
 const cors = require('cors');
+// const PORT = process.env.PORT || 3000 ;
 // to talk with the DB
 const pg = require('pg');
 const DATABASE_URL = process.env.DATABASE_URL;
-const client = new pg.Client(DATABASE_URL)
+const client = new pg.Client(DATABASE_URL)                
 // call the express in our server
 const server = express();
 server.use(cors());
@@ -21,6 +22,7 @@ const PORT = process.env.PORT || 3000;
 const methodOverride = require('method-override');
 
 // middleware 
+
 server.use(express.urlencoded({ extended: true }));
 server.set('view engine', 'ejs');
 server.use('/public', express.static('public'));
@@ -79,7 +81,6 @@ server.get('/machine_profile' , (req , res ) => {
 }) 
 
 
-
 // profile page 
 server.get('/profile' , (req , res ) => {
     let sql = 'SELECT * FROM food ;' ;
@@ -116,7 +117,7 @@ function addToDataBase(req , res){
     let values = [machine , catagory , url] ;
     return client.query(SQL , values)
         .then(() => {
-            res.send('welldone !!')
+            res.redirect('/machine_profile')
 
         }) 
 }
@@ -141,9 +142,10 @@ function toDatabase( req , res ){
 
 // server.use( express.static('/public'));
 
+
 server.get('/', (req, res) => {
     res.status(200).render('index')
-})
+});
 
 server.get('/newMeal', (req, res) => {
     res.render('pages/searches/new')
@@ -205,7 +207,67 @@ function getExcercise(req , res ){
         })
 }
 
+// add machine info to database
+server.post('/addMachine' , addToDataBase) ;
+function addToDataBase(req , res){
+    // console.log(req.body)
+    let {machine , catagory , url } = req.body ;
+    let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
+    let values = [machine , catagory , url] ;
+    return client.query(SQL , values)
+        .then(() => {
+            res.redirect('/machine_profile')
+        }) 
+}
 
+
+
+server.get('/addMachine:table_machine' , getmachineById)
+
+// ///////////////////////////// 
+function getmachineById(req , res) {
+    let machine = req.params.machine_name;
+    let SQL = `SELECT * FROM machine WHERE machine=$1 ;`;
+    let values = [machine];
+    return client.query(SQL , values)
+    .then((data)=>{
+      res.render('pages/profile/mystatus' , { machineChouse : data.rows[0]})
+    })
+}
+/////////// update the machine ////////
+server.put( '/update/:machine_name' , updateMachine);
+
+function updateMachine(req , res) {
+    let {machine} = req.body ;
+    console.log(machine)
+    let SQL = `UPDATE machine SET machine=$1 WHERE machine=$2;`;
+    let values = [machine ,req.params.machine_name];
+    return client.query(SQL , values)
+  .then(()=>{
+     return res.redirect(`/mystatus/${req.params.machine_name}`);
+  })
+}
+
+// new route to delete data from database for food
+// server.delete('/delete/:the_food' , deleteFood) ;
+// function deleteFood(req , res){
+//   let SQL = 'DELETE FROM food WHERE id=$1 ;' ;
+//   let values = [req.params.the_food] ;
+//   return client.query(SQL , values)
+//     .then(() => {
+//       return res.redirect('pages/profile/mystatus');
+//     })
+// }
+// new route to delete data from database for exercise
+server.delete('/delete/:the_machine' , deleteMachine) ;
+function deleteMachine(req , res){
+  let SQL = 'DELETE FROM machine WHERE machine=$1 ;' ;
+  let values = [req.params.the_machine] ;
+  return client.query(SQL , values)
+    .then(() => {
+      return res.redirect('pages/profile/mystatus');
+    })
+}
 
 
 server.use('*', (req, res) => {

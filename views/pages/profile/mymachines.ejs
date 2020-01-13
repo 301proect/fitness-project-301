@@ -8,20 +8,24 @@
 </head>
 <body>
     <% table.forEach( (val) => { %>
-        <form action="/update/<%= val.id %>?_method=PUT" method="POST">
+        <div class="exercise-Section">
+            <form action="/update/<%= val.id %>?_method=PUT" method="POST">
+                
+                    <li> machine name:  </li>
+                    <input type="text" name="mname" value="<%= val.machine%>">
+                    <br>
+                    <li> catagory:  </li>
+                    <input type="text" name="catagory" value="<%= val.catagory %>">
+                    <br>
+                    <img src="<%= val.url? val.url:'https://bitsofco.de/content/images/2018/12/broken-1.png' %>">
 
-            <li> machine name:  </li>
-            <input type="text" name="mname" value="<%= val.machine%>">
-            <br>
-            <li> catagory:  </li>
-            <input type="text" name="catagory" value="<%= val.catagory %>">
-            <br>
-            <img src="<%= val.url? val.url:'https://bitsofco.de/content/images/2018/12/broken-1.png' %>">
-            <button type="submit" > Update </button>
-        </form>
-        <form action="/delete_mach/<%= val.id %>?_method=DELETE" method="POST"> 
-            <button type="submit"> Delete Machine</button>
-        </form>
+                    <button type="submit" > Update </button>
+                
+            </form>
+            <form action="/delete_mach/<%= val.id %>?_method=DELETE" method="POST"> 
+                <button type="submit"> Delete Machine</button>
+            </form>
+        </div>
 
     <% }) %>
 

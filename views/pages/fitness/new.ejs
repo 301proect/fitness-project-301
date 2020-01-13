@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>exercise form</title>
+    <link rel="stylesheet" href="public/styles/form.css">
 </head>
 <body>
 
 
-    <h1> excercise page</h1>
+    <!-- <h2> excercise page</h2> -->
+    
+    <form action="/getExr" method="POST" class="exercise-form">
+        <h2 class="exercise-header"> get exercise depend on machine available in your gym </h2>
+        <h2 class="exercise-header"> Select one of Machine Please : </h2>
 
-    <form action="/getExr" method="POST">
-
-        <h1> get exercise depend on machine available in your gym </h1>
-
-        <br>
-
-        bench
-    <input type="radio" name="muscle" value="bench">
+        <fieldset>
+            <!-- <br> -->
+    <!-- Select one of Machine Please -->
     <br>
-    dumbbells
-    <input type="radio" name="muscle" value="dumbbell">
-    <br>
-    smith machine
-    <input type="radio" name="muscle" value="smith">
-    <br>
-    barbell
-    <input type="radio" name="muscle" value="barbell">
-    <br>
-    pull machines
-    <input type="radio" name="muscle" value="pull">
-    <br>
-    <button type="submit" > Submit </button>
+    <label for="" class="machine-input">    
+    <input type="radio" name="muscle" class="radio-input" value="bench" required><span> bench </span>
+</label> 
+<label for="" class="machine-input">
+    <input type="radio" name="muscle"  class="radio-input" value="dumbbell" required> <span>dumbbells</span> 
+</label> 
+<label for="" class="machine-input">
+  <input type="radio" name="muscle"class="radio-input" value="smith" required><span>smith machine </span>
+</label> 
+<label for="" class="machine-input"> 
+     <input type="radio" name="muscle" class="radio-input" value="barbell" required><span>barbell</span>
+    </label>   
+    <label for="" class="machine-input">
+    <input type="radio" name="muscle" class="radio-input" value="pull" required> <span>pull machines</span>
+</label> 
+    <button type="submit" class="button"> Submit </button>
+</fieldset>
     </form>
     
 

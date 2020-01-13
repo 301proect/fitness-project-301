@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My Profile </title>
+    <link rel="stylesheet" href="public/styles/myProfile.css">
 </head>
+
 <body>
-    <div>
+    <button class="button" id="my-food">My Diet Food </button>
+    <button class="button" id="my-exercise">My Exercises</button>
+
+    <div class="my-profile">
 
         <% table.forEach( (val) => { %>
-            <div>
-                <li> calories: <%= val.cal%> </li>
-                <li> protien: <%= val.prot %> </li>
-                <li> fat: <%= val.fat %> </li>
-                <li> carbohydrate: <%= val.carb %> </li>
+        <div class="My-choise">
+            <section class="results">
+                <div class="food-Result-1">
+                    <ul class="food-result-list-client">
+                        <li> calories: <%= val.cal%> </li>
+                        <li> protien: <%= val.prot %> </li>
+                        <li> fat: <%= val.fat %> </li>
+                        <li> carbohydrate: <%= val.carb %> </li>
 
-                <form action="/delete_prog/<%= val.id %>?_method=DELETE" method="POST"> 
-                <button type="submit"> Delete Plan</button>
-                </form>
+                        </u>
+                </div>
+                <section class="my-choises">
+                    <!-- <button class="button" >update</button> -->
+                    <!-- <form action="<%=`/delete/${val.id}?_method=DELETE`%>"method="POST"> -->
+                    <form action="/delete_prog/<%= val.id %>?_method=DELETE" method="POST">
+                        <button class="button">Delete</button>
+                    </form>
 
-                <% let jsonData = JSON.parse(val.meals) %>
-                <% jsonData.forEach( (meal) => { %>
-
-                    <li>Meal Name: <%= meal.title %> </li>
-                    <li>Ready in minutes: <%= meal.readyInMinutes %> </li>
-                    <li>Serving: <%= meal.servings %> </li>
-                    <img src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0]%>" >
-
-                <% }) %>
-
-                
-            </div>
-
-       <% }) %>
-
+                    <% let jsonData = JSON.parse(val.meals) %>
+                    <section class="all-food-section">
+                        <% jsonData.forEach( (meal) => { %>
+                        <div class="food-Section">
+                            <ul class="food-result-list">
+                                <li>Meal Name: <%= meal.title %> </li>
+                                <li>Ready in minutes: <%= meal.readyInMinutes %> </li>
+                                <li>Serving: <%= meal.servings %> </li>
+                                <img id="resultImage"
+                                    src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0] %>">
+                            </ul>
+                        </div>
+                        <% }) %>
+                    </section>
+                </section>
+            </section>
+        </div>
+        <% }) %>
+        </section>
     </div>
-    
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="public/js/app.js"></script>
 </body>
+
 </html>
