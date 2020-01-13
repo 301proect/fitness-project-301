@@ -57,16 +57,17 @@ html{
      list-style-type: none;
     }
     .food-Result-1{
-        width: 70%;
-        height: 30%;
-        padding: 3%;
+        width: 47%;
+        /* height: 30%; */
+        padding: 1%;
+        margin: 25px auto;
     }
     .food-result-list-client{
-        width: 70%;
-        height: 30%;
-        padding: 3%; 
+        /* width: 70%; */
+        height: 11%;
+        /* padding: 3%;  */
     }
-    .food-Section:hover , .food-Result-1:hover{
+    .food-Section:hover{
      transform: scale(1.01);
      transition: 860ms; 
  }
@@ -97,21 +98,8 @@ html{
      text-align: center;
      line-height: 30px;
      padding: 0;
-     font-size: 18px;
+     font-size: 16px;
  }
- /* input , select{
-    border: 0;
-    border-bottom: 1px solid #313131;
-    width: 88%;
-    padding: 2%;
-    background: #222225;
-    margin: 1% 0 5% 0;
-    color: #fff;
-}
-input:hover , select:hover , input:focus , select:focus , input:checked , select:checked{
-    box-shadow: 0 0px 8px #250404;
-    /* margin: 3% 3% 3% 10%; */
-/* } */ */
  .food-result-h{
      font-size: 95%;
      font-family: 'Roboto', sans-serif;
@@ -149,7 +137,7 @@ input:hover , select:hover , input:focus , select:focus , input:checked , select
     padding: 15px 42px;
     transition: 200ms;
     margin-left: 6%;
-    margin-top: 1pc;
+    margin-top: 2pc;
     margin-bottom: 5%;
     color: #FFFFFF;
     outline: none;
@@ -184,3 +172,21 @@ input:hover , select:hover , input:focus , select:focus , input:checked , select
     height: 100%;
     width: 100%;
   }  
+  
+  .list-one{
+      width: 70%;
+      padding: 1%;
+      margin: 0%;
+      font-size: 15px;
+      background:none ;
+      color: white;
+    border: none;
+    width: 100%;
+    box-shadow: 0 0px 8px #250404;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; 
+  }
+  .list-one:hover{
+    transform: scale(1.01);
+    transition: 860ms; 
+  }

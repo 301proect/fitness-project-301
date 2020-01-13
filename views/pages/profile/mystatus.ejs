@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,15 +49,15 @@
                 <li> machine name: <%= val.machine%> </li>
                 <li> catagory : <%= val.catagory %> </li>
                 <img id="resultImage" src="<%= val.url %>" >
-                
+<!--                 
                 <form action="<%=`/delete/${val.machine}?_method=DELETE`%>"method="POST">
-                <button  class="button">Delete</button>
-            </form>
-            <form action="<%=`/update/${val.machine}_method=PUT`%>" method="POST" id="update-form">
+                <button  class="button">Delete</button> -->
+            <!-- </form> -->
+            <!-- <form action="<%=`/update/${val.machine}_method=PUT`%>" method="POST" id="update-form">
                 <button class="button" id="update">update</button> <br>
                 <label for="">machine name</label>
                     <input type="text" name="machine" value="<%=val.machine %>">
-                </form>
+                </form> -->
             </div>
         </div>
                 <% }) %>

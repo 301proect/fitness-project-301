@@ -108,6 +108,7 @@ label{
     margin-top: -10px;
 }
 #results {
+    
         padding: 3%;
         margin: 5%;
         color: white;
@@ -139,10 +140,7 @@ label{
     margin-top: 5%;
 }
 .radio-input{
-    /* border:rgb(197, 24, 24) solid ;
-    width: 35%;
-    padding: 1%;
-    margin: 0%; */
+    margin-right: 6%;
     box-shadow: none;
 }
 .exercise-header{
@@ -154,8 +152,8 @@ label{
 .machine-input{
     width: auto;
     font-size: 18px;
-    padding:  0;
-    margin-left: 0%;
+    padding:  1%;
+    margin-left: 31%;
     /* display: none;  */
 }
 .button {

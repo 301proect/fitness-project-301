@@ -16,42 +16,7 @@ $(document).ready( function () {
  
      })
 ///////////////////////// for flash massage ////////////////////////////////////////
-    //  (function($) {
-    //     $.fn.flash_message = function(options) {
-          
-    //       options = $.extend({
-    //         text: 'Done',
-    //         time: 2500,
-    //         how: 'before',
-    //         class_name: ''
-    //       }, options);
-          
-    //       return $(this).each(function() {
-    //         if( $(this).parent().find('.flash_message').get(0) )
-    //           return;
-            
-    //         var message = $('<span />', {
-    //           'class': 'flash_message ' + options.class_name,
-    //           text: options.text
-    //         }).hide().fadeIn('fast');
-            
-    //         $(this)[options.how](message);
-            
-    //         message.delay(options.time).fadeOut('normal', function() {
-    //           $(this).remove();
-    //         });
-            
-    //       });
-    //     };
-    // })(jQuery);
-    
-    // $('.add-item').click(function() {
-    
-    //     $('#status-area').flash_message({
-    //         text: 'Added to cart!',
-    //         how: 'append'
-    //     });
-    // });
+ 
 /////////////////////////// update ///////////////////////////////
 
 $(document).ready(function () {
@@ -60,3 +25,9 @@ $(document).ready(function () {
 $('#update').click(function () {
     $('#update-form').show()
 })
+
+///////////////////////////////////////////////
+$("#add-to-me").click(function() {
+    // swal("Success Message Title", "Well done, you pressed a button", "success")
+    alert('thanks its add' );
+  });

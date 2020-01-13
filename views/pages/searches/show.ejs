@@ -30,23 +30,23 @@
                     <form action="/status" method="POST">
 
                         <ul class="food-result-list-client">
-                            <li> Your Targeted Calories: </li>
-                            <input type="text" value=" <%= food.nutrients.calories %>" name="cal">
+                            <li class="list-one-l"> Your Targeted Calories: </li>
+                            <input  class="list-one"type="text" value=" <%= food.nutrients.calories %>" name="cal">
                         
-                            <li> Protein: </li>
-                            <input type="text" value="<%=food.nutrients.protein %>" name="prot">
+                            <li class="list-one-l">Protein: </li> 
+                            <input class="list-one" type="text" value="<%=food.nutrients.protein %>" name="prot">
                         
-                            <li> Fat:</li>
-                            <input type="text" name="fat" value="<%=food.nutrients.fat %>">
+                            <li class="list-one-1"> Fat:</li> 
+                            <input class="list-one" type="text" name="fat" value="<%=food.nutrients.fat %>">
                       
-                            <li> Carbs: </li>
-                            <input type="text" name="carb" value="<%=food.nutrients.carbohydrates %>">
+                            <li class="list-one-1"> Carbs: </li>
+                            <input class="list-one" type="text" name="carb" value="<%=food.nutrients.carbohydrates %>">
 
                             <!-- secret data ha ha ha -->
-                            <input type="text" name="array" value="<%= JSON.stringify(food.meals) %>"
+                            <input class="list-one" type="text" name="array" value="<%= JSON.stringify(food.meals) %>"
                                 style="display: none;">
                         </ul>
-                        <button class="button" type="submit" >Add To My Profile</button>
+                        <button class="button" type="submit" id="">Add To My Profile</button>
                     </form>
 
                 </div>
