@@ -41,7 +41,7 @@ html{
     }
  } 
  .results{
-     /* background-color: rgb(197, 24, 24); */
+     /* background-color: rgb(68, 0, 0); */
      display: grid;
      grid-template-columns: auto ;
   grid-template-rows: auto auto auto auto;
@@ -125,12 +125,12 @@ html{
 
  }
  .button {
-    background-color: rgb(197, 24, 24);
+    background-color: rgb(68, 0, 0);
     border: none;
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
-    background: rgb(197, 24, 24);
-    /* border-color: rgb(197, 24, 24); */
+    background: rgb(68, 0, 0);
+    /* border-color: rgb(68, 0, 0); */
     border-radius: 30px;
     font-size: 80%;
     width: 50%;
@@ -155,17 +155,17 @@ html{
     width: 24px;
   }
   .button:before {
-    border-top: 2px solid rgb(197, 24, 24);
+    border-top: 2px solid rgb(68, 0, 0);
     left: 0px;
     top: -5px;
   }
   .button:after {
-    border-bottom: 2px solid rgb(197, 24, 24);
+    border-bottom: 2px solid rgb(68, 0, 0);
     bottom: -5px;
     right: 0px;
   }
   .button:hover {
-    background-color: rgb(197, 24, 24);
+    background-color: rgb(68, 0, 0);
   }
   .button:hover:before,
   .button:hover:after {

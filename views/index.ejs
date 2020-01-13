@@ -1,6 +1,4 @@
-<a href="/newMeal"> Get Meal Plan :) </a>
-<a href="/newExc"> Get excercise </a>
-<a href="/profile"> My Profile </a>
+
  
 <!DOCTYPE html>
 <html lang="en">
@@ -13,41 +11,35 @@
   <link rel="stylesheet" href="public/styles/style.css">
   <link rel="stylesheet" media="screen and (max-width: 768px)" href="public/styles/mobile.css">
   <link rel="stylesheet" media="screen and (min-width: 1100px)" href="public/styles/widescreen.css">
-  <title>EdgeLedger Financial | Accounting & Investment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <title>Fittnes (A3M)</title>
 </head>
-<body id="home">
-  <!-- Navbar -->
-  <nav id="navbar">
-    <h1 class="logo">
 
-      <span class="text-primary" style="font-family: 'Shadows Into Light', cursive;
-      ">
-     A3M</span>      
-    </h1>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#what">What</a></li>
-      <li><a href="#who">Who</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+
+<body id="home">
+  <header>
+  <!-- Navbar -->
+ <%- include('partials/header') %>
   <!-- Header: Showcase -->
-  <header id="showcase">
+  <div id="showcase">
     <div class="showcase-content">
       <h1 style="font-family: 'Kalam', cursive; color: blanchedalmond;
-      " class="l-heading">
+      " class="l-heading wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
         The Sky Is The Limit
       </h1>
       <p style="font-family: 'Kalam', cursive; color:white;
-      " class="lead">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptatibus debitis praesentium inventore, eum deserunt.
+      " class="lead  wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptatibus debitis <br/> praesentium inventore, eum deserunt.
       </p>
-    <a href="/profile"  class="btn"> My Profile </a>
-    <a href="/machine_profile" class="btn">My Machines</a>
+      <div class="home-buttons wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+        <a href="/profile"  class="btn" class="button"> My Profile </a>
+        <a href="/machine_profile" class="btn" class="button">My Machines</a>
+      </div>
+
  
     </div>
-  </header>
-
+  </div>
+</header>
   <!-- Section: What We Do -->
   <section id="what" class="bg-light py-1">
 
@@ -120,7 +112,7 @@
                 <li>have to fight a battle more than once to win it</li>
                 <li>You can have your cake and lose weight, too!”</li>
               </ul>
-            <a href="/newMeal"  class="btn-action">Get start</a>
+            <a href="/newMeal"  class="btn">Get start</a>
             </div>
           </div>
         </div>
@@ -135,7 +127,7 @@
                 <li>You have to do the work yourself</li>
                 <li>Think of your workouts as important meetings</li>
               </ul>
-              <a href="/newExc"  class="btn-action">Get start</a>
+              <a href="/newExc"  class="btn">Get start</a>
               <!-- <a href="/newExc"> Get excercise </a> -->
             </div>
           </div>
@@ -147,34 +139,6 @@
     
   </section>
   
-
-  <!-- Section: Contact -->
-  <!-- <section id="contact">
-    <div class="contact-form bg-primary p-2">
-      <h2 class="m-heading">Contact Us</h2>
-      <p>Please use the form below to contact us</p>
-      <form>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="Enter Name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="Enter Email">
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" placeholder="Enter Message"></textarea>
-        </div>
-        <input type="submit" value="Send" class="btn btn-dark">
-      </form>
-    </div>
-    <div class="map"></div>
-  </section> -->
 
   <!-- Footer -->
   <footer id="main-footer" class="bg-dark text-center py-1">
@@ -188,13 +152,13 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script>
+    new WOW().init();
+    </script>
   <!-- Local JS File -->
   <script src="js/main.js"></script>
 
-  <!-- Google Maps -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoZg2Es_GrQHZf_52j2-xZ3cTfBCR0HII&callback=initMap"
-  async defer></script>
 </body>
 
 
