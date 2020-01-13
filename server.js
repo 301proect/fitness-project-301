@@ -116,7 +116,7 @@ function addToDataBase(req , res){
     let values = [machine , catagory , url] ;
     return client.query(SQL , values)
         .then(() => {
-            res.send('welldone !!')
+            res.redirect('/')
 
         }) 
 }
