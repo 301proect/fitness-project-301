@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="public/styles/result.css">
+    <title>My Machines</title>
     <link rel="stylesheet" href="public/styles/myProfile.css">
+    <link rel="stylesheet" href="public/styles/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="public/styles/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="public/styles/widescreen.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
-<body>
+<body >
+    <%- include('../../partials/header') %>
+
     <% table.forEach( (val) => { %>
-        <div class="exercise-Section">
-        <form action="/update/<%= val.id %>?_method=PUT" method="POST">
-            <li> machine name:  </li>
-            <input type="text" name="mname" value="<%= val.machine%>">
+        <div class="wow fadeInUp "  data-wow-duration="1.5s" data-wow-delay="1.5s">
+        <div  class="exercise-Section" >
+        <form  action="/update/<%= val.id %>?_method=PUT" method="POST" >
+            <li class="machine-list"> machine name:  </li>
+            <input class="machine-input" type="text" name="mname" value="<%= val.machine%>">
             <br>
-            <li> catagory:  </li>
-            <input type="text" name="catagory" value="<%= val.catagory %>">
+            <li class="machine-list"> catagory:  </li>
+            <input class="machine-input" type="text" name="catagory" value="<%= val.catagory %>">
             <br>
             <div></div>
             <img class="machine-pic" src="<%= val.url? val.url:'https://www.gymequip.eu/wp-content/uploads/2015/10/Cable-Crossover-Machine-C2X-1.png' %>">
@@ -27,7 +34,16 @@
             <button class="button" type="submit"> Delete Machine</button>
         </form>
     </div>
+</div>
     <% }) %>
 
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="public/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>
+      new WOW().init();
+      </script>
 </body>
+
 </html>

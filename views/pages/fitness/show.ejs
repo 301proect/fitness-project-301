@@ -8,6 +8,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="public/styles/result.css">
     <link rel="stylesheet" href="public/styles/myProfile.css">
+    <link rel="stylesheet" href="public/styles/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 </head>
 
 <body>
@@ -16,7 +20,7 @@
     <!-- <h1>the excercise result </h1> -->
     <% workout.forEach((val) => { %>
 
-    <div class="">
+    <div class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
         <form action="/addMachine" name="<%= val.data.id%>" method="POST" class="machine-form-result">
             <ul>
                 <li> machine Name:</li>
@@ -26,7 +30,7 @@
                 <input type="text" name="catagory" value="<%= val.data.category %>">
                 <br>
                 <img class="machine-pic" src="<%= val.data.image ? val.data.image: 'https://www.gymequip.eu/wp-content/uploads/2015/10/Cable-Crossover-Machine-C2X-1.png' %>" width="60%"  height="60%" alt="<%= val.data.name %> image" >
-                <!-- <input type="text" name="url" value="<%= val.data.image %>"> -->
+                <input type="text" name="url" value="<%= val.data.image %>" style="display: none;">
             </ul>
             <button type="submit"class="button">Add to my Exercises</button>
         </form>
@@ -38,6 +42,10 @@
 
     <% }) %>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script>
+  new WOW().init();
+  </script>
 
 </body>
 

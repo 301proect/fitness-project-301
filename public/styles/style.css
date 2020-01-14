@@ -9,6 +9,8 @@
   
   body {
     background-color: black;
+    background: url("https://webcomicms.net/sites/default/files/clipart/153351/fitness-background-images-153351-7600391.jpg") no-repeat center;
+    background-size: 100% 100%;
    
     font-family: 'Roboto', sans-serif;
    
@@ -57,7 +59,7 @@
   }
   
   .l-heading {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 0.75rem;
     line-height: 1.1;
   }
@@ -69,7 +71,7 @@
   }
   
   .lead {
-    font-size: 1.3rem;
+    font-size: 27px;
     margin-bottom: 2rem;
   }
   
@@ -161,6 +163,7 @@
     left:0;
     right: 0;
     bottom: 0;
+    background: #00000033;
   }
   
   /* Section: What We Do */
@@ -229,7 +232,10 @@
     padding: 0.5rem;
   }
   .container1{
-    background: #fff;
+    /* background: #fff; */
+    background: url(https://www.lafortalezarehab.com/wp-content/uploads/2018/10/bigstock-Gym-Blur-Background-Fitness-Ce-236308354.jpg) no-repeat center;
+    background-size: cover;
+
     margin: 0 auto;
     padding: 50px 0;
     display: block;
@@ -321,7 +327,10 @@
   }
 
   .wow1{
-    margin-bottom: 3em;
+     margin-bottom: 2em;
+    font-size: 23px;
+    font-family: 'Sigmar One', cursive;
+    text-shadow: 2px 2px #928d8d;
   
   
   }
@@ -343,6 +352,14 @@
   }
   .btn-action{
     margin-top: 5%;
+  }
+  .contener-herder{
+    visibility: visible;
+    animation-delay: 0s;
+    animation-name: fadeInUp;
+    font-size: 52px;
+    font-family: 'Sigmar One', cursive;
+    text-shadow: 2px 2px #928d8d;
   }
   
   
@@ -425,6 +442,9 @@
   }
   #what .items div h3, #what .items div p {
     color: #fff;
+}
+#main-button{
+ margin-left: 6%;
 }
 
   

@@ -61,7 +61,7 @@ function deleteMachine(req , res ){
     let SQL = 'DELETE FROM machine WHERE id=$1 ;' ;
     let values = [req.params.mach_id] ;
 
-    console.log( 'hiii' , values);
+    // console.log( 'hiii' , values);
     return client.query(SQL , values)
         .then(() => {
            return res.redirect('/machine_profile');
@@ -75,6 +75,7 @@ server.get('/machine_profile' , (req , res ) => {
     let sql = 'SELECT * FROM machine ;' ;
     return client.query(sql)
         .then((data) => {
+            // console.log(data.rows)
             // console.log(data.rows);
             res.render('pages/profile/mymachines' , {table : data.rows});
         })
@@ -109,18 +110,19 @@ function deleteMeal(req , res){
 }
 
 // add machine info to database
-server.post('/addMachine' , addToDataBase) ;
-function addToDataBase(req , res){
-    // console.log(req.body)
-    let {machine , catagory , url } = req.body ;
-    let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
-    let values = [machine , catagory , url] ;
-    return client.query(SQL , values)
-        .then(() => {
-            // res.redirect('/machine_profile')
+// server.post('/addMachine' , addToDataBase) ;
+// function addToDataBase(req , res){
+//     // console.log(req.body)
+//     let {machine , catagory , url } = req.body ;
+//     let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
+//     let values = [machine , catagory , url] ;
+//     console.log( "hello",SQL,values)
+//     return client.query(SQL , values)
+//         .then(() => {
+//             // res.redirect('/machine_profile')
 
-        }) 
-}
+//         }) 
+// }
 
 
 // add the food to database
@@ -214,6 +216,8 @@ function addToDataBase(req , res){
     let {machine , catagory , url } = req.body ;
     let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
     let values = [machine , catagory , url] ;
+        // console.log( "hello",SQL,values)
+
     return client.query(SQL , values)
         .then(() => {
             res.redirect('/machine_profile')

@@ -24,6 +24,12 @@ html{
     }
 }
  @media (min-width: 768px){
+
+    body{
+        background: url(https://i.ibb.co/cDpwPp5/yesss.jpg) no-repeat center;
+        background-size: cover;
+    
+    }
  main{
      display: grid;
      grid-template-columns: auto auto;
@@ -54,23 +60,6 @@ html{
 
  /* -----------------------  input form  --------------------------------------- */
 
-/* .foodForm button , .calc-form button ,.exercise-button{
-    font-family: 'Roboto', sans-serif;
-    color: #FFFFFF;
-    background: rgb(68, 0, 0);
-    border-color: rgb(68, 0, 0);
-    border-radius: 30px;
-    font-size: 86%;
-    width: 40%;
-    padding: 15px 42px;
-    transition: 200ms;
-    margin-top: 10%;
-    margin-left: 28%;
-} */
-/* .foodForm button:hover , .calc-form button:hover , .exercise-button:hover {
-   transform: scale(1.06);
-   transition: 860ms; 
-} */
 fieldset{
 /* display: grid;
 grid-template-columns: 50% 50%; */
@@ -145,14 +134,16 @@ label{
 }
 .exercise-header{
     text-align: center;
+    font-size: 20px;
+    margin-bottom: 4%;
 }
 .exercise-button{
     margin-top: 10%; 
 }
 .machine-input{
     width: auto;
-    font-size: 18px;
-    padding:  1%;
+    font-size: 19px;
+    padding:  3%;
     margin-left: 31%;
     /* display: none;  */
 }
@@ -210,5 +201,8 @@ label{
   a {
     text-decoration: none;
     color: white;
-    background: black;
+    /* background: black; */
+}
+#submit-button{
+    margin-top: 4%;
 }

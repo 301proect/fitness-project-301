@@ -10,9 +10,11 @@
 <link rel="stylesheet" href="../public/styles/layout.css">
 <link rel="stylesheet" href="../public/styles/modules.css">
 <link rel="stylesheet" href="public/styles/form.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link rel="stylesheet" href="public/styles/style.css">
 <link rel="stylesheet" media="screen and (max-width: 768px)" href="public/styles/mobile.css">
 <link rel="stylesheet" media="screen and (min-width: 1100px)" href="public/styles/widescreen.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
 <body class="white-bg">
@@ -23,10 +25,11 @@
     <%- include('../../partials/header') %>
 
 </header>
-<main>
+<main >
  <!------------------------------------------- cal form  --------------------------------->
-<div class="calc-outer-wrap">
-    <div id="form-error" style="display:none;"></div>
+
+ 
+<div class="wow" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;" class="calc-outer-wrap"  >
     <form class="calc-form" id="calc-form">
       <fieldset id="call">
       <div class="form-fields">
@@ -86,18 +89,18 @@
     <div id="results" style="display:none;"></div>
     </div><!--  /.calc-outer-wrap -->
 
+
+
     
  <!-- ==================================================information form ================================= -->
-<div id="results" style="display:none;"></div>
-<form action="/mealLest" method="POST" class="foodForm" >
+ <div class="wow" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;">
+<form  action="/mealLest" method="POST" class="foodForm" >
     <fieldset>
         <h2 class="herader-form"> Please Select Your Information</h2> <br>
-        <!-- <input type="radio" name="time" value="day"> -->
-        <!-- <input type="radio" name="time" value="week"> -->
         <label for="">Your Name :</label>
-    <input class="food-input" type="text" name="userName" id="user" placeholder="Enter your name please" required> <br>
+    <input class="food-input" type="text" name="userName" id="user" placeholder="Enter your name please" required > <br>
     <label for=""> Calories:</label>
-      <input  class="food-input" type="number" name="calories" value="cal-result" placeholder="Write the calories Please ">
+      <input  class="food-input" type="number" name="calories" value="cal-result" placeholder="Write the calories Please " required>
       <label for="">Diet Type:</label>
         <select  class="food-input" name="dietType" id="dietType" required>Diet Type 
             <option value="defult"> Select Diet Type .. </option>
@@ -108,15 +111,23 @@
         </select>
         <label for=""> Spicial Satuation</label>
         <input class="food-input" type="text" placeholder="Select If you have Spicial Satuation (allergic .. etc)">
-      </div><!--  /.field-outer -->
         <button type="submit" class="button"> Submit</button>
+      </div><!--  /.field-outer -->
    
     </fieldset>
    </form>
+
+  </div>
+
+
 </main>
 <footer>
    
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script>
+  new WOW().init();
+  </script>
 <script src="public/js/cal.js"></script>
 </body>
 </html>
