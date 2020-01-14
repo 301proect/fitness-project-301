@@ -7,17 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Profile </title>
     <link rel="stylesheet" href="public/styles/myProfile.css">
+    <link rel="stylesheet" href="public/styles/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="public/styles/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="public/styles/widescreen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 </head>
 
 <body>
-    <button class="button" id="my-food">My Diet Food </button>
-    <button class="button" id="my-exercise">My Exercises</button>
+    <%- include('../../partials/header') %>
+
 
     <div class="my-profile">
 
         <% table.forEach( (val) => { %>
-        <div class="My-choise">
-            <section class="results">
+        <div  class="My-choise">
+            <section class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" class="results">
                 <div class="food-Result-1">
                     <ul class="food-result-list-client">
                         <li> calories: <%= val.cal%> </li>
@@ -39,11 +44,11 @@
                         <% jsonData.forEach( (meal) => { %>
                         <div class="food-Section">
                             <ul class="food-result-list">
+                                <img id="resultImage"
+                                    src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0] %>">
                                 <li>Meal Name: <%= meal.title %> </li>
                                 <li>Ready in minutes: <%= meal.readyInMinutes %> </li>
                                 <li>Serving: <%= meal.servings %> </li>
-                                <img id="resultImage"
-                                    src="https://spoonacular.com/recipeImages/<%=meal.imageUrls[0] %>">
                             </ul>
                         </div>
                         <% }) %>
@@ -56,6 +61,11 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="public/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>
+      new WOW().init();
+      </script>
+  
 </body>
 
 </html>

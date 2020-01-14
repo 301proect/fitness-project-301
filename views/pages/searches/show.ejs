@@ -13,12 +13,19 @@
         <link rel="stylesheet" href="../public/styles/layout.css">
         <link rel="stylesheet" href="../public/styles/modules.css">
         <link rel="stylesheet" href="public/styles/result.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
     </head>
 
 </head>
 
 <body>
     <!-- food.nutrients -->
+    <header>
+        <%- include('../../partials/header') %>
+    
+    </header>
+    
 
     <main>
         <section class="results">
@@ -27,7 +34,7 @@
                     <h2 class="food-result-h">You Will Achive This Amount by using our male
                         plan </h2>
                     <br>
-                    <form action="/status" method="POST">
+                    <form class="wow fadeInUp "  data-wow-duration=".3s" action="/status" method="POST">
 
                         <ul class="food-result-list-client">
                             <li class="list-one-l"> Your Targeted Calories: </li>
@@ -92,5 +99,9 @@
     </section>
 </section> -->
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script>
+    new WOW().init();
+    </script>
 
 </html>

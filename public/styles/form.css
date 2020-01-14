@@ -24,6 +24,12 @@ html{
     }
 }
  @media (min-width: 768px){
+
+    body{
+        background: url(https://i.ibb.co/cDpwPp5/yesss.jpg) no-repeat center;
+        background-size: cover;
+    
+    }
  main{
      display: grid;
      grid-template-columns: auto auto;
@@ -41,7 +47,7 @@ html{
 }
 .foodForm ,.calc-form{
     padding: 3%;
-    margin: 2%;
+    margin: 50px auto;
  color: white;
     background-color: #222225;
     box-shadow: 0px 0px 80px 0px rgba(0,0,0,.1);
@@ -54,23 +60,6 @@ html{
 
  /* -----------------------  input form  --------------------------------------- */
 
-/* .foodForm button , .calc-form button ,.exercise-button{
-    font-family: 'Roboto', sans-serif;
-    color: #FFFFFF;
-    background: rgb(197, 24, 24);
-    border-color: rgb(197, 24, 24);
-    border-radius: 30px;
-    font-size: 86%;
-    width: 40%;
-    padding: 15px 42px;
-    transition: 200ms;
-    margin-top: 10%;
-    margin-left: 28%;
-} */
-/* .foodForm button:hover , .calc-form button:hover , .exercise-button:hover {
-   transform: scale(1.06);
-   transition: 860ms; 
-} */
 fieldset{
 /* display: grid;
 grid-template-columns: 50% 50%; */
@@ -117,7 +106,7 @@ label{
         font-family: 'Roboto', sans-serif;
         color: #FFFFFF;
         background: rgb(34, 34, 37);
-        border-color: rgb(197, 24, 24);
+        border-color: rgb(68, 0, 0);
         /* border-radius: 30px; */
         font-size: 18px;
         width: 80%;
@@ -145,24 +134,26 @@ label{
 }
 .exercise-header{
     text-align: center;
+    font-size: 20px;
+    margin-bottom: 4%;
 }
 .exercise-button{
     margin-top: 10%; 
 }
 .machine-input{
     width: auto;
-    font-size: 18px;
-    padding:  1%;
+    font-size: 19px;
+    padding:  3%;
     margin-left: 31%;
     /* display: none;  */
 }
 .button {
-    background-color: rgb(197, 24, 24);
+    background-color: rgb(68, 0, 0);
     border: none;
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
-    background: rgb(197, 24, 24);
-    /* border-color: rgb(197, 24, 24); */
+    background: rgb(68, 0, 0);
+    /* border-color: rgb(68, 0, 0); */
     border-radius: 30px;
     font-size: 80%;
     width: 50%;
@@ -187,17 +178,17 @@ label{
     width: 24px;
   }
   .button:before {
-    border-top: 2px solid rgb(197, 24, 24);
+    border-top: 2px solid rgb(68, 0, 0);
     left: 0px;
     top: -5px;
   }
   .button:after {
-    border-bottom: 2px solid rgb(197, 24, 24);
+    border-bottom: 2px solid rgb(68, 0, 0);
     bottom: -5px;
     right: 0px;
   }
   .button:hover {
-    background-color: rgb(197, 24, 24);
+    background-color: rgb(68, 0, 0);
   }
   .button:hover:before,
   .button:hover:after {
@@ -210,5 +201,8 @@ label{
   a {
     text-decoration: none;
     color: white;
-    background: black;
+    /* background: black; */
+}
+#submit-button{
+    margin-top: 4%;
 }

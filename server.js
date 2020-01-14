@@ -45,10 +45,10 @@ function updateMAchine(req , res ){
     let SQL = 'UPDATE machine SET machine=$1, catagory=$2 WHERE id=$3;' ;
     let values = [mname , catagory , req.params.mach_name];
 
-    console.log('helooo' , values);
+    // console.log('helooo' , values);
     return client.query(SQL , values)
         .then(() => {
-            return res.send('Updated')
+            return res.redirect('/machine_profile')
 
         })
 }
@@ -61,10 +61,10 @@ function deleteMachine(req , res ){
     let SQL = 'DELETE FROM machine WHERE id=$1 ;' ;
     let values = [req.params.mach_id] ;
 
-    console.log( 'hiii' , values);
+    // console.log( 'hiii' , values);
     return client.query(SQL , values)
         .then(() => {
-           return res.send('deleted');
+           return res.redirect('/machine_profile');
         })
 }
 
@@ -75,7 +75,8 @@ server.get('/machine_profile' , (req , res ) => {
     let sql = 'SELECT * FROM machine ;' ;
     return client.query(sql)
         .then((data) => {
-            console.log(data.rows);
+            // console.log(data.rows)
+            // console.log(data.rows);
             res.render('pages/profile/mymachines' , {table : data.rows});
         })
 }) 
@@ -86,14 +87,14 @@ server.get('/profile' , (req , res ) => {
     let sql = 'SELECT * FROM food ;' ;
     return client.query(sql)
         .then((data) => {
-            console.log(data.rows);
+            // console.log(data.rows);
             res.render('pages/profile/mystatus' , {table : data.rows});
         })
 }) 
 
 
 
-// delete the meal plan :)
+// delete the meal plan :)s
 server.delete('/delete_prog/:meal_id' , deleteMeal) ;
 
 function deleteMeal(req , res){
@@ -101,26 +102,27 @@ function deleteMeal(req , res){
     let SQL = 'DELETE FROM food WHERE id=$1 ;' ;
     let values = [req.params.meal_id] ;
 
-    console.log(values);    
+    // console.log(values);    
      client.query(SQL , values)
     .then(() => {
-        res.send('deleted !!!');
+        res.redirect('/profile');
     })
 }
 
 // add machine info to database
-server.post('/addMachine' , addToDataBase) ;
-function addToDataBase(req , res){
-    console.log(req.body)
-    let {machine , catagory , url } = req.body ;
-    let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
-    let values = [machine , catagory , url] ;
-    return client.query(SQL , values)
-        .then(() => {
-            res.redirect('/machine_profile')
+// server.post('/addMachine' , addToDataBase) ;
+// function addToDataBase(req , res){
+//     // console.log(req.body)
+//     let {machine , catagory , url } = req.body ;
+//     let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
+//     let values = [machine , catagory , url] ;
+//     console.log( "hello",SQL,values)
+//     return client.query(SQL , values)
+//         .then(() => {
+//             // res.redirect('/machine_profile')
 
-        }) 
-}
+//         }) 
+// }
 
 
 // add the food to database
@@ -134,7 +136,7 @@ function toDatabase( req , res ){
 
     return client.query(SQL , values)
         .then(() => {
-            res.render('pages/thanks/added')
+            res.redirect('/profile')
         })
 }
 
@@ -214,6 +216,8 @@ function addToDataBase(req , res){
     let {machine , catagory , url } = req.body ;
     let SQL = 'INSERT INTO machine(machine , catagory , url) VALUES ( $1 , $2 , $3 ) ;' ;
     let values = [machine , catagory , url] ;
+        // console.log( "hello",SQL,values)
+
     return client.query(SQL , values)
         .then(() => {
             res.redirect('/machine_profile')
@@ -239,7 +243,7 @@ server.put( '/update/:machine_name' , updateMachine);
 
 function updateMachine(req , res) {
     let {machine} = req.body ;
-    console.log(machine)
+    // console.log(machine)
     let SQL = `UPDATE machine SET machine=$1 WHERE machine=$2;`;
     let values = [machine ,req.params.machine_name];
     return client.query(SQL , values)
@@ -247,28 +251,6 @@ function updateMachine(req , res) {
      return res.redirect(`/mystatus/${req.params.machine_name}`);
   })
 }
-
-// new route to delete data from database for food
-// server.delete('/delete/:the_food' , deleteFood) ;
-// function deleteFood(req , res){
-//   let SQL = 'DELETE FROM food WHERE id=$1 ;' ;
-//   let values = [req.params.the_food] ;
-//   return client.query(SQL , values)
-//     .then(() => {
-//       return res.redirect('pages/profile/mystatus');
-//     })
-// }
-// new route to delete data from database for exercise
-server.delete('/delete/:the_machine' , deleteMachine) ;
-function deleteMachine(req , res){
-  let SQL = 'DELETE FROM machine WHERE machine=$1 ;' ;
-  let values = [req.params.the_machine] ;
-  return client.query(SQL , values)
-    .then(() => {
-      return res.redirect('pages/profile/mystatus');
-    })
-}
-
 
 server.use('*', (req, res) => {
     res.status(404).send(' 404 ERROR !!!')
